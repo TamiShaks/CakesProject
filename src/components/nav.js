@@ -16,7 +16,7 @@ export default function Nav ()
          <img src={smallLogo2} alt="לוגו" height="90" />
        </Link>
 
-<button 
+{/* <button 
   className="navbar-toggler" 
   type="button" 
   data-bs-toggle="collapse" 
@@ -25,7 +25,7 @@ export default function Nav ()
   aria-expanded="false" 
   aria-label="Toggle navigation">
   <span className="navbar-toggler-icon"></span>
-</button>
+</button> */}
 
 <div className="collapse navbar-collapse" id="navbarNav">
   
