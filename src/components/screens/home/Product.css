@@ -1,0 +1,48 @@
+/* עיצוב כללי לקופסה */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* אפקט בעת ריחוף */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* תמונת עוגה */
+  .cake-image {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* גוף הכרטיס */
+  .card-body {
+    padding: 1rem;
+    background-color: #fff;
+  }
+  
+  /* שם העוגה */
+  .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* תיאור */
+  .card-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.4rem;
+  }
+  
+  /* מחיר */
+  .card-text strong {
+    color: #d35400;
+  }
+  

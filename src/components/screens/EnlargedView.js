@@ -7,7 +7,7 @@ export const EnlargedView = (myCake) => {
   return (
     <>
   {cakeList
-    .filter(cake => (cake.price === myCake.price) &&(cake.amount === myCake.amount))
+    .filter(cake => ((cake.shape === myCake.shape) &&(cake.color === myCake.color))||(cake.Characteristic === myCake.Characteristic))
     .map(cake => (
         <div key={cake.id}>
             <Product {...cake} />
