@@ -22,7 +22,7 @@ import cakeImage21 from '../assets/images/21.jpg';
 import cakeImage22 from '../assets/images/22.jpg';
 import cakeImage23 from '../assets/images/23.jpg';
 import cakeImage24 from '../assets/images/24.jpg';
-import { SHOWGALLERY } from './actionTypes';
+import { SHOWGALLERY ,INVITECAKE} from './actionTypes';
 
 
 const InitialCakesList = {
@@ -33,7 +33,7 @@ const InitialCakesList = {
             image: cakeImage1,  // replace with the actual image path
             description: "A delicious chocolate cake with rich frosting.",
             price: 20.00,
-            amount:2
+            amount:12
             ,Characteristic:"Fabric ribbons"
             ,shake:" circle",
             color:"pink"
@@ -45,7 +45,7 @@ const InitialCakesList = {
             image: cakeImage2, // replace with the actual image path
             description: "A classic vanilla cake with buttercream icing.",
             price: 20.00,
-            amount:4
+            amount:5
             ,shake:" circle",
             color:"white"
             ,Characteristic:"solid"
@@ -56,7 +56,7 @@ const InitialCakesList = {
             image: cakeImage3, // replace with the actual image path
             description: "A moist red velvet cake with cream cheese frosting.",
             price: 25.00,
-            amount:2
+            amount:6
             ,Characteristic:"Fabric ribbons"
             ,shake:" circle",
             color:"white"
@@ -67,7 +67,7 @@ const InitialCakesList = {
             image: cakeImage4,  // replace with the actual image path
             description: "A delicious chocolate cake with rich frosting.",
             price: 27.00,
-            amount:2
+            amount:10
             ,shape:" heart",
             color:"white"
             ,Characteristic:"flawers"
@@ -78,7 +78,7 @@ const InitialCakesList = {
             image: cakeImage5, // replace with the actual image path
             description: "A classic vanilla cake with buttercream icing.",
             price: 18.00,
-            amount:2
+            amount:4
             ,shake:" circle",
             color:"white"
             ,Characteristic:"ribbons"
@@ -89,7 +89,7 @@ const InitialCakesList = {
             image: cakeImage6, // replace with the actual image path
             description: "A moist red velvet cake with cream cheese frosting.",
             price: 25.00,
-            amount:2
+            amount:3
             ,shake:" circle",
             color:"white"
             ,Characteristic:"birthday"
@@ -305,7 +305,25 @@ export const cakesReducer = (state = InitialCakesList, action) => {
             return {
                 ...state,
             };
-      
+            case INVITECAKE:
+                console.log("!!!!!!!!!");
+            
+                const updatedCakesList = state.cakesList.map((cake, index) => {
+                    if (index === action.payload-1) {
+                        const newAmount = cake.amount - 1;
+                        return {
+                            ...cake,
+                            amount: Math.max(0, newAmount), // Ensure amount doesn't go below 0
+                        };
+                    }
+            
+                    return cake; // Return the unchanged cake
+                });
+            
+                return {
+                    ...state,
+                    cakesList: updatedCakesList, // Return the new cakesList
+                };
         default:
             return state;        
     }

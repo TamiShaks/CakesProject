@@ -32,7 +32,7 @@ export default function Home() {
                         <Product {...cake} />
                     </div>
                 ))}
-               <EnlargedView {...cakeList[1]}/> 
+               {/* <EnlargedView {...cakeList[1]}/>  */}
             </div>
             
         </div>

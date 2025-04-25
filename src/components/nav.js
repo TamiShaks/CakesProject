@@ -46,12 +46,7 @@ export default function Nav ()
               </div>
           </div>
         </nav>
-        <Routes>
-        <Route path="/Home" element={<Home />} />
-        <Route path="/Receipes" element={<Receipes />} />
-        <Route path="/Special" element={<Special />} />
-        <Route path="/BakingOven" element={<BakingOven />} />
-      </Routes>
+        
         </>
     )
 }

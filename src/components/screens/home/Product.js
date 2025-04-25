@@ -16,17 +16,25 @@
 
 
 import React from 'react';
+import { Link, Route, Routes } from "react-router-dom";
+import { EnlargedView } from '../EnlargedView';
+import Special from '../Special';
+import BakingOven from '../BakingOven';
 
 export default function Product(props) {
     return (
         <div className="card" style={{ width: '18rem', margin: '10px' }}>
-            <img src={props.image} className="card-img-top" alt={props.name} />
+            <Link to={`/bigViewe/${props.id}`}>
+            
+             <img src={props.image} className="card-img-top" alt={props.name} />
+            </Link >
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>
                 <p className="card-text">{props.description}</p>
                 <p className="card-text"><strong>Price: </strong>${props.price}</p>
                 <p className="card-text"><small className="text-muted">ID: {props.id}</small></p>
             </div>
+           
         </div>
     );
 }
