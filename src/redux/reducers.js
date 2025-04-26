@@ -31,7 +31,7 @@ import cakeImage30 from '../assets/images/46.jpg';
 import cakeImage31 from '../assets/images/47.jpg';
 import cakeImage32 from '../assets/images/48.jpg';
 import cakeImage33 from '../assets/images/33.jpg';
-import { SHOWGALLERY } from './actionTypes';
+
 import { SHOWGALLERY ,INVITECAKE} from './actionTypes';
 
 
