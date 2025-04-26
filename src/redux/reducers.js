@@ -32,6 +32,7 @@ import cakeImage31 from '../assets/images/47.jpg';
 import cakeImage32 from '../assets/images/48.jpg';
 import cakeImage33 from '../assets/images/33.jpg';
 import { SHOWGALLERY } from './actionTypes';
+import { SHOWGALLERY ,INVITECAKE} from './actionTypes';
 
 
 const InitialCakesList = {
@@ -424,7 +425,25 @@ export const cakesReducer = (state = InitialCakesList, action) => {
             return {
                 ...state,
             };
-      
+            case INVITECAKE:
+                console.log("!!!!!!!!!");
+            
+                const updatedCakesList = state.cakesList.map((cake, index) => {
+                    if (index === action.payload-1) {
+                        const newAmount = cake.amount - 1;
+                        return {
+                            ...cake,
+                            amount: Math.max(0, newAmount), // Ensure amount doesn't go below 0
+                        };
+                    }
+            
+                    return cake; // Return the unchanged cake
+                });
+            
+                return {
+                    ...state,
+                    cakesList: updatedCakesList, // Return the new cakesList
+                };
         default:
             return state;        
     }

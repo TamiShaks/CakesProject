@@ -1,1 +1,2 @@
 export const SHOWGALLERY='SHOWGALLERY';
+export const INVITECAKE='INVITECAKE';
