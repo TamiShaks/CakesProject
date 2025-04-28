@@ -53,32 +53,33 @@
 // };
 
 
+import './home/Product.css';
 
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { reduceFromCart, removeFromCart } from '../../redux/actions';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
+import { reduceFromCart, removeFromCart } from '../../../redux/actions';
 
 export default function ShopingCartProduct(props) {
     const dispatch = useDispatch();
 
     const handleReduceFromCart = (id) => {
-        if (props) {
+          console.log("id:  ======",id);
             dispatch(reduceFromCart(id)); // Dispatch the action to decrement the amount
-        }
+       
     };
     
     const handleRemoveFromCart = (id) => {
-        if (props) {
+        console.log("id:  ======",id);
+
             dispatch(removeFromCart(id)); // Dispatch the action to remove the product
-        }
+        
     };
 
     return (
         <div className="card mb-4">
             <Link to={`/bigViewe/${props.id}`}>
-                <img src={props.image} alt={props.name} className="card-img-top" style={{ height: '200px', objectFit: 'cover' }} />
+                <img src={props.image} alt={props.name} className="card-img-top cake-image"/>
             </Link>
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>

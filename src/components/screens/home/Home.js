@@ -19,7 +19,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Product from './Product';
 import Nav from "../../nav";
-import { EnlargedView } from '../EnlargedView';
+import { EnlargedView } from './EnlargedView';
 
 export default function Home() {
     const cakeList = useSelector((state) => state.cakesList.cakesList);

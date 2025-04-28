@@ -1,8 +1,8 @@
 import { Link, Route, Routes } from "react-router-dom";
-import Special from "./screens/Special";
-import Receipes from "./screens/Receipes";
+import Special from "./screens/special/Special";
+import Receipes from "./screens/recepies/ReceipessGallery";
 import Home from "./screens/home/Home";
-import BakingOven from "./screens/BakingOven";
+import BakingOven from "./screens/bakingOven/BakingOven";
 
 import smallLogo2 from '../images/smallLogo2.jpg'; 
 

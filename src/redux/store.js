@@ -1,10 +1,12 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import { cakesReducer } from './reducers'; // Ensure this path is correct
-import { ShopingCartReducer } from './ShopingCartReducer'; // Ensure this path is correct
+import { cakesReducer } from './reducers/GalleryHomeReducers'; // Ensure this path is correct
+import { ShopingCartReducer } from './reducers/ShopingCartReducer'; // Ensure this path is correct
+import RecepiesReducer from './reducers/RecepiesReducer';
 
 const rootReducer = combineReducers({
     cakesList: cakesReducer,
     invitedCakeList: ShopingCartReducer,
+    RecepiesCakesList: RecepiesReducer,
 });
 
 // Correctly pass rootReducer as `reducer`

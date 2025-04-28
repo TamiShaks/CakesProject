@@ -32,8 +32,8 @@ import cakeImage31 from '../assets/images/47.jpg';
 import cakeImage32 from '../assets/images/48.jpg';
 import cakeImage33 from '../assets/images/33.jpg';
 
-import { SHOWGALLERY ,INVITECAKE} from './actionTypes';
-import { addToCart } from './actions';
+import { SHOWGALLERY ,INVITECAKE} from '../actionTypes';
+import { addToCart } from '../actions';
 import { useDispatch } from 'react-redux';
 
 

@@ -2,10 +2,10 @@
 
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Product from './home/Product';
+import Product from './Product';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { addToCart, inviteCake } from'../../redux/actions';
+import { addToCart, inviteCake } from'../../../redux/actions';
 export const EnlargedView = () => {
     const dispatch = useDispatch();
     const { id } = useParams(); 

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import { ShopingCartProduct } from './ShopingCartProduct';
+import { ShopingCartProduct } from '../ShopingCartProduct';
 
 export default function ShopingCartGallery() {
     const invitedCakeList = useSelector((state) => state.invitedCakeList.invitedCakeList);
