@@ -33,6 +33,8 @@ import cakeImage32 from '../assets/images/48.jpg';
 import cakeImage33 from '../assets/images/33.jpg';
 
 import { SHOWGALLERY ,INVITECAKE} from './actionTypes';
+import { addToCart } from './actions';
+import { useDispatch } from 'react-redux';
 
 
 const InitialCakesList = {
@@ -420,30 +422,38 @@ const InitialCakesList = {
 
 
 export const cakesReducer = (state = InitialCakesList, action) => {
+
     switch(action.type) {
+        
         case SHOWGALLERY:
             return {
                 ...state,
             };
             case INVITECAKE:
-                console.log("!!!!!!!!!");
-            
-                const updatedCakesList = state.cakesList.map((cake, index) => {
-                    if (index === action.payload-1) {
-                        const newAmount = cake.amount - 1;
-                        return {
-                            ...cake,
-                            amount: Math.max(0, newAmount), // Ensure amount doesn't go below 0
-                        };
-                    }
-            
-                    return cake; // Return the unchanged cake
-                });
-            
-                return {
-                    ...state,
-                    cakesList: updatedCakesList, // Return the new cakesList
-                };
+    console.log("Inviting Cake. Current Cakes List:", state.cakesList); // Log current cakes list
+    const updatedCakesList = state.cakesList.map((cake, index) => {
+        if (index === action.payload - 1) {
+            console.log("Inviting Cake Index:", index); // Log the index being modified
+            const newAmount = cake.amount - 1;
+
+            if (newAmount < 0) {
+                return cake; // Return unchanged cake
+            }
+
+            console.log("Adding to cart for cake:", cake); // Log the cake being added to cart
+            return {
+                ...cake,
+                amount: newAmount // Update the amount
+            };
+        }
+        return cake; // Return the unchanged cake
+    });
+
+    console.log("Updated Cakes List:", updatedCakesList); // Log the updated cakes list
+    return {
+        ...state,
+        cakesList: updatedCakesList, // Return the new cakesList
+    };
         default:
             return state;        
     }

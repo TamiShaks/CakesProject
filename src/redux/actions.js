@@ -1,4 +1,4 @@
-import { SHOWGALLERY,INVITECAKE,SHOWCART,REMOVEFROMCART,ADDTOCART } from "./actionTypes";
+import { SHOWGALLERY,INVITECAKE,SHOWCART,REMOVEFROMCART,ADDTOCART,REDUCEFROMCART } from "./actionTypes";
 
 export const show=(id, value)=>({
     type: SHOWGALLERY,
@@ -9,12 +9,16 @@ export const inviteCake=(id)=>({
     type: INVITECAKE,
     payload:id,
 });
-export const addToCart=(id)=>({
+export const addToCart=(product)=>({
     type: ADDTOCART,
-    payload:id,
+    payload:product,
 });
 export const removeFromCart=(id)=>({
     type: REMOVEFROMCART,
+    payload:id,
+});
+export const reduceFromCart=(id)=>({
+    type: REDUCEFROMCART,
     payload:id,
 });
 export const showCart=(id)=>({

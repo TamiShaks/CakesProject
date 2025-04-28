@@ -1,14 +1,12 @@
-import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import { cakesReducer } from './reducers';
-import {ShopingCartReducer, invitedCakeList} from './ShopingCartReducer'
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import { cakesReducer } from './reducers'; // Ensure this path is correct
+import { ShopingCartReducer } from './ShopingCartReducer'; // Ensure this path is correct
 
+const rootReducer = combineReducers({
+    cakesList: cakesReducer,
+    invitedCakeList: ShopingCartReducer,
+});
 
-
-
-const rootReducer= combineReducers({
-    cakesList:cakesReducer,
-    invitedCakeList:ShopingCartReducer,
-})
-
-export const store=configureStore({reducer:cakesReducer},{reducer:ShopingCartReducer});
+// Correctly pass rootReducer as `reducer`
+export const store = configureStore({ reducer: rootReducer });
 export default store;

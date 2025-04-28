@@ -5,15 +5,16 @@ import { useSelector } from 'react-redux';
 import Product from './home/Product';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { inviteCake } from'../../redux/actions';
+import { addToCart, inviteCake } from'../../redux/actions';
 export const EnlargedView = () => {
     const dispatch = useDispatch();
     const { id } = useParams(); 
-    const cakeList = useSelector((state) => state.cakesList);
+    const cakeList = useSelector((state) => state.cakesList.cakesList);
     const myCake = cakeList.find(cake => cake.id === parseInt(id)); 
 
     const handleInviteCake = () => {
-        dispatch(inviteCake(myCake.id)); // Dispatch the action to decrement the amount
+        dispatch(inviteCake(myCake.id));
+        dispatch(addToCart({myCake})) // Dispatch the action to decrement the amount
     };
 
     if (!myCake) { 

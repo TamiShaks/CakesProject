@@ -1,17 +1,3 @@
-// import React from 'react';
-
-// export default function Product(props) {
-  
-//     return (
-//      <>
-//        <p>{props.id}</p>
-//        <p>{props.name}</p>
-//        <img src={props.image}></img>
-//        <p>{props.description}</p>
-//        <p>{props.price}</p>
-//      </>
-//     );
-// }
 
 import './Product.css';
 import React from 'react';

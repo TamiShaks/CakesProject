@@ -1,18 +1,18 @@
-// import React from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import Product from './Product';
+// // import React from 'react';
+// // import { useDispatch, useSelector } from 'react-redux';
+// // import Product from './Product';
 
-// export default function Home() {
-//      const cakeList=useSelector((state)=>state.cakesList);
+// // export default function Home() {
+// //      const cakeList=useSelector((state)=>state.cakesList);
 
-//     return (
-//      <>
-//         {cakeList.map(cake => (
-//                 <Product {...cake} />
-//             ))}
-//      </>
-//     );
-// }
+// //     return (
+// //      <>
+// //         {cakeList.map(cake => (
+// //                 <Product {...cake} />
+// //             ))}
+// //      </>
+// //     );
+// // }
 
 
 import React from 'react';
@@ -22,7 +22,7 @@ import Nav from "../../nav";
 import { EnlargedView } from '../EnlargedView';
 
 export default function Home() {
-    const cakeList = useSelector((state) => state.cakesList);
+    const cakeList = useSelector((state) => state.cakesList.cakesList);
 
     return (
         <div className="container">
@@ -32,7 +32,7 @@ export default function Home() {
                         <Product {...cake} />
                     </div>
                 ))}
-               <EnlargedView {...cakeList[31]}/> 
+               {/* <EnlargedView {...cakeList[1]}/>  */}
             </div>
             
         </div>
@@ -41,8 +41,4 @@ export default function Home() {
 
  
 
-
-
-
-
-
+ 
