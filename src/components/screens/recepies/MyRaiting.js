@@ -1,53 +1,102 @@
-import * as React from 'react';
-import Rating from '@mui/material/Rating';
+// import * as React from 'react';
+// import Rating from '@mui/material/Rating';
+// import Box from '@mui/material/Box';
+// import StarIcon from '@mui/icons-material/Star';
+
+// const labels = {
+//   0.5: 'Useless',
+//   1: 'Useless+',
+//   1.5: 'Poor',
+//   2: 'Poor+',
+//   2.5: 'Ok',
+//   3: 'Ok+',
+//   3.5: 'Good',
+//   4: 'Good+',
+//   4.5: 'Excellent',
+//   5: 'Excellent+',
+// };
+
+// function getLabelText(value) {
+//   return `${value} Star${value !== 1 ? 's' : ''}, ${labels[value]}`;
+// }
+
+// export default function MyRaiting({ id }) {
+//   const storageKey = `rating_${id}`;
+//   const savedValue = parseFloat(localStorage.getItem(storageKey)) || 0;
+
+//   const [value, setValue] = React.useState(savedValue);
+//   const [hover, setHover] = React.useState(-1);
+
+//   const handleChange = (event, newValue) => {
+//     setValue(newValue);
+//     localStorage.setItem(storageKey, newValue); // שומר את הדירוג
+//   };
+
+//   return (
+//     <Box sx={{ width: 200, display: 'flex', alignItems: 'center', margin: 'auto' }}>
+//       <Rating
+//         name={`hover-feedback-${id}`}
+//         value={value}
+//         precision={0.5}
+//         getLabelText={getLabelText}
+//         onChange={handleChange}
+//         onChangeActive={(event, newHover) => {
+//           setHover(newHover);
+//         }}
+//         emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
+//       />
+//       {value !== null && (
+//         <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
+//       )}
+//     </Box>
+//   );
+// }
+
+
+
+
+
+import  React from 'react';
 import Box from '@mui/material/Box';
-import StarIcon from '@mui/icons-material/Star';
+import Rating from '@mui/material/Rating';
+import Typography from '@mui/material/Typography';
+import { useEffect,useState } from 'react';
 
-const labels = {
-  0.5: 'Useless',
-  1: 'Useless+',
-  1.5: 'Poor',
-  2: 'Poor+',
-  2.5: 'Ok',
-  3: 'Ok+',
-  3.5: 'Good',
-  4: 'Good+',
-  4.5: 'Excellent',
-  5: 'Excellent+',
-};
+export default function MyRating({id}) {
+  const [value, setValue] = useState(0);
 
-function getLabelText(value) {
-  return `${value} Star${value !== 1 ? 's' : ''}, ${labels[value]}`;
-}
+  const storageKey = id ? `rating-${id}` : null;
 
-export default function MyRaiting({ id }) {
-  const storageKey = `rating_${id}`;
-  const savedValue = parseFloat(localStorage.getItem(storageKey)) || 0;
+  // טוען את הדירוג מה-localStorage פעם אחת
+  useEffect(() => {
+    if (!storageKey) return;
+    const saved = localStorage.getItem(storageKey);
+    if (saved !== null && !isNaN(saved)) {
+      setValue(Number(saved));
+    }
+  }, [storageKey]);
 
-  const [value, setValue] = React.useState(savedValue);
-  const [hover, setHover] = React.useState(-1);
+  // שומר את הדירוג בכל שינוי
+  useEffect(() => {
+    if (storageKey) {
+      localStorage.setItem(storageKey, value.toString());
+    }
+  }, [storageKey, value]);
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-    localStorage.setItem(storageKey, newValue); // שומר את הדירוג
-  };
 
   return (
-    <Box sx={{ width: 200, display: 'flex', alignItems: 'center', margin: 'auto' }}>
+    <Box sx={{ '& > legend': { mt: 2 } }}>
+      <Typography component="legend"></Typography>
       <Rating
-        name={`hover-feedback-${id}`}
+        name="simple-controlled"
         value={value}
-        precision={0.5}
-        getLabelText={getLabelText}
-        onChange={handleChange}
-        onChangeActive={(event, newHover) => {
-          setHover(newHover);
+        onChange={(event, newValue) => {
+          setValue(newValue);
         }}
-        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
       />
-      {value !== null && (
-        <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : value]}</Box>
-      )}
+      
     </Box>
   );
 }
+
+

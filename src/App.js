@@ -36,6 +36,7 @@ import Receipes from './components/screens/recepies/ReceipessGallery';
 import Special from './components/screens/special/Special';
 import { EnlargedView } from './components/screens/home/EnlargedView';
 import ReceipessGallery from './components/screens/recepies/ReceipessGallery';
+import Recepie from './components/screens/recepies/Recepie';
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/product" element={<Product />} />
         <Route path="/bigViewe/:id" element={<EnlargedView />} />
+        <Route path="/Recepie/:id" element={<Recepie />} />
         <Route path="/Home" element={<Home />} />
         <Route path="/Receipes" element={<ReceipessGallery />} />
         <Route path="/Special" element={<Special />} />

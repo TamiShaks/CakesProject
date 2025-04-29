@@ -15,7 +15,7 @@ export const ShopingCartReducer = (state = InitialInvitedCakesList, action) => {
             };
 
         case REMOVEFROMCART:
-            const {removeId } = action.payload;
+            const removeId = action.payload;
             console.log("Removing Cake with ID:", removeId); // Log which ID is being removed
             return {
                 ...state,
@@ -27,7 +27,7 @@ export const ShopingCartReducer = (state = InitialInvitedCakesList, action) => {
             };
 
         case REDUCEFROMCART:
-            const {reduceId } = action.payload;
+            const reduceId  = action.payload;
             console.log("Reducing Cake with ID:", reduceId); // Log the ID to reduce
             const existingCakeToReduce = state.invitedCakeList.find(cake => cake.id === parseInt(reduceId));
             
