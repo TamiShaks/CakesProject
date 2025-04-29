@@ -53,7 +53,7 @@
 // };
 
 
-import './home/Product.css';
+import '../home/Product.css';
 
 import React from 'react';
 import { useDispatch } from 'react-redux';

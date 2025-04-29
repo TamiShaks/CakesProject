@@ -6,7 +6,7 @@ import RecepiesReducer from './reducers/RecepiesReducer';
 const rootReducer = combineReducers({
     cakesList: cakesReducer,
     invitedCakeList: ShopingCartReducer,
-    RecepiesCakesList: RecepiesReducer,
+    myRecepiesCakesList: RecepiesReducer,
 });
 
 // Correctly pass rootReducer as `reducer`

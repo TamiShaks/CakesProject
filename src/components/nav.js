@@ -4,7 +4,7 @@ import Receipes from "./screens/recepies/ReceipessGallery";
 import Home from "./screens/home/Home";
 import BakingOven from "./screens/bakingOven/BakingOven";
 
-import smallLogo2 from '../images/smallLogo2.jpg'; 
+import smallLogo2 from '../assets/images/smallLogo2.jpg'; 
 
 export default function Nav ()
 {

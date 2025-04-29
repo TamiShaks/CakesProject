@@ -30,11 +30,12 @@ import Home from './components/screens/home/Home';
 import { Provider, useSelector } from 'react-redux';
 import store from './redux/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import BakingOven from './components/screens/BakingOven';
+import BakingOven from './components/screens/bakingOven/BakingOven';
 import Product from './components/screens/home/Product';
-import Receipes from './components/screens/Receipes';
-import Special from './components/screens/Special';
-import { EnlargedView } from './components/screens/EnlargedView';
+import Receipes from './components/screens/recepies/ReceipessGallery';
+import Special from './components/screens/special/Special';
+import { EnlargedView } from './components/screens/home/EnlargedView';
+import ReceipessGallery from './components/screens/recepies/ReceipessGallery';
 
 function App() {
   return (
@@ -57,7 +58,7 @@ function AppRoutes() {
         <Route path="/product" element={<Product />} />
         <Route path="/bigViewe/:id" element={<EnlargedView />} />
         <Route path="/Home" element={<Home />} />
-        <Route path="/Receipes" element={<Receipes />} />
+        <Route path="/Receipes" element={<ReceipessGallery />} />
         <Route path="/Special" element={<Special />} />
         <Route path="/BakingOven" element={<BakingOven />} />
       </Routes>

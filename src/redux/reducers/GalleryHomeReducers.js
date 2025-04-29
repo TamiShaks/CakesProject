@@ -1,36 +1,36 @@
-import cakeImage1 from '../assets/images/1.jpg';
-import cakeImage2 from '../assets/images/2.jpg';
-import cakeImage3 from '../assets/images/3.jpg';
-import cakeImage4 from '../assets/images/4.jpg';
-import cakeImage5 from '../assets/images/5.jpg';
-import cakeImage6 from '../assets/images/6.jpg';
-import cakeImage7 from '../assets/images/7.jpg';
-import cakeImage8 from '../assets/images/8.jpg';
-import cakeImage9 from '../assets/images/9.jpg';
-import cakeImage10 from '../assets/images/10.jpg';
-import cakeImage11 from '../assets/images/11.jpg';
-import cakeImage12 from '../assets/images/12.jpg';
-import cakeImage13 from '../assets/images/13.jpg';
-import cakeImage14 from '../assets/images/14.jpg';
-import cakeImage15 from '../assets/images/15.jpg';
-import cakeImage16 from '../assets/images/16.jpg';
-import cakeImage17 from '../assets/images/17.jpg';
-import cakeImage18 from '../assets/images/18.jpg';
-import cakeImage19 from '../assets/images/19.jpg';
-import cakeImage20 from '../assets/images/20.jpg';
-import cakeImage21 from '../assets/images/21.jpg';
-import cakeImage22 from '../assets/images/22.jpg';
-import cakeImage23 from '../assets/images/23.jpg';
-import cakeImage24 from '../assets/images/24.jpg';
-import cakeImage25 from '../assets/images/41.jpg';
-import cakeImage26 from '../assets/images/42.jpg';
-import cakeImage27 from '../assets/images/43.jpg';
-import cakeImage28 from '../assets/images/44.jpg';
-import cakeImage29 from '../assets/images/45.jpg';
-import cakeImage30 from '../assets/images/46.jpg';
-import cakeImage31 from '../assets/images/47.jpg';
-import cakeImage32 from '../assets/images/48.jpg';
-import cakeImage33 from '../assets/images/33.jpg';
+import cakeImage1 from './../../assets/images/1.jpg';
+import cakeImage2 from './../../assets/images/2.jpg';
+import cakeImage3 from './../../assets/images/3.jpg';
+import cakeImage4 from './../../assets/images/4.jpg';
+import cakeImage5 from './../../assets/images/5.jpg';
+import cakeImage6 from './../../assets/images/6.jpg';
+import cakeImage7 from './../../assets/images/7.jpg';
+import cakeImage8 from './../../assets/images/8.jpg';
+import cakeImage9 from './../../assets/images/9.jpg';
+import cakeImage10 from './../../assets/images/10.jpg';
+import cakeImage11 from './../../assets/images/11.jpg';
+import cakeImage12 from './../../assets/images/12.jpg';
+import cakeImage13 from './../../assets/images/13.jpg';
+import cakeImage14 from './../../assets/images/14.jpg';
+import cakeImage15 from './../../assets/images/15.jpg';
+import cakeImage16 from './../../assets/images/16.jpg';
+import cakeImage17 from './../../assets/images/17.jpg';
+import cakeImage18 from './../../assets/images/18.jpg';
+import cakeImage19 from './../../assets/images/19.jpg';
+import cakeImage20 from './../../assets/images/20.jpg';
+import cakeImage21 from './../../assets/images/21.jpg';
+import cakeImage22 from './../../assets/images/22.jpg';
+import cakeImage23 from './../../assets/images/23.jpg';
+import cakeImage24 from './../../assets/images/24.jpg';
+import cakeImage25 from './../../assets/images/41.jpg';
+import cakeImage26 from './../../assets/images/42.jpg';
+import cakeImage27 from './../../assets/images/43.jpg';
+import cakeImage28 from './../../assets/images/44.jpg';
+import cakeImage29 from './../../assets/images/45.jpg';
+import cakeImage30 from './../../assets/images/46.jpg';
+import cakeImage31 from './../../assets/images/47.jpg';
+import cakeImage32 from './../../assets/images/48.jpg';
+import cakeImage33 from './../../assets/images/33.jpg';
 
 import { SHOWGALLERY ,INVITECAKE} from '../actionTypes';
 import { addToCart } from '../actions';
@@ -89,7 +89,7 @@ const InitialCakesList = {
             {
                 id: 5,
                 name: " Pastel Sprinkle Birthday Cake",
-                image: cakeImage26,  // replace with the actual image path
+                image: cakeImage28,  // replace with the actual image path
                 description: "Pastel birthday cake with pink swirls, sprinkles & golden message.",
                 price: 21.00,
                 amount:2            
@@ -113,7 +113,7 @@ const InitialCakesList = {
         {
             id: 7,
             name: "  Vanilla Sprinkle Delight",
-            image: cakeImage28,  // replace with the actual image path
+            image: cakeImage26,  // replace with the actual image path
             description: " Light vanilla cream cake with rainbow sprinkles." ,
             price: 14.00,
             amount:6           
