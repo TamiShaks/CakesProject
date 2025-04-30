@@ -2,7 +2,7 @@ import '../home/Product.css';
 import React from 'react';
 import { Link } from "react-router-dom";
 import MyRaiting from './MyRaiting';
-
+import { Rating } from '@mui/material';
 export default function RecepiesProduct(props) {
     return (
         <div
@@ -39,7 +39,7 @@ export default function RecepiesProduct(props) {
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>
                 <p className="card-text">{props.description}</p>
-
+              {/* <Rating></Rating> */}
                 <MyRaiting id={props.id} />
 
             </div>

@@ -32,7 +32,7 @@ import cakeImage31 from './../../assets/images/47.jpg';
 import cakeImage32 from './../../assets/images/48.jpg';
 import cakeImage33 from './../../assets/images/33.jpg';
 
-import { SHOWGALLERY ,INVITECAKE} from '../actionTypes';
+import { SHOWGALLERY ,INVITECAKE, ADDRETURN, ADDALLRETURN} from '../actionTypes';
 import { addToCart } from '../actions';
 import { useDispatch } from 'react-redux';
 
@@ -422,13 +422,54 @@ const InitialCakesList = {
 
 
 export const cakesReducer = (state = InitialCakesList, action) => {
-
+console.log("tttttthe action is:",action.type)
     switch(action.type) {
         
         case SHOWGALLERY:
             return {
                 ...state,
             };
+         case ADDRETURN:
+                const id  = action.payload;
+                const updateCakesList = state.cakesList.map((cake, index) => {
+                    if (index === id-1) {
+                        const newAmount = cake.amount + 1;
+
+                        console.log("Adding to cart for cake:", cake); // Log the cake being added to cart
+                        return {
+                            ...cake,
+                            amount: newAmount // Update the amount
+                        };
+                    }
+                    return cake; // Return the unchanged cake
+                });
+            
+                console.log("Updated Cakes List:", updateCakesList); // Log the updated cakes list
+                return {
+                    ...state,
+                    cakesList: updateCakesList, // Return the new cakesList
+                };
+         case ADDALLRETURN:
+            const props=action.payload
+                const updateAllCakesList = state.cakesList.map((cake, index) => {
+                    if (index === props.id-1) {
+                        const newAmount = cake.amount+props.amount;
+
+                        console.log("Adding to cart for cake:", cake); // Log the cake being added to cart
+                        return {
+                            ...cake,
+                            amount: newAmount // Update the amount
+                        };
+                    }
+                    return cake; // Return the unchanged cake
+                });
+            
+                console.log("Updated Cakes List:", updateAllCakesList); // Log the updated cakes list
+                return {
+                    ...state,
+                    cakesList: updateAllCakesList, // Return the new cakesList
+                };
+
             case INVITECAKE:
     console.log("Inviting Cake. Current Cakes List:", state.cakesList); // Log current cakes list
     const updatedCakesList = state.cakesList.map((cake, index) => {
