@@ -25,7 +25,7 @@ export default function Home() {
     const cakeList = useSelector((state) => state.cakesList.cakesList);
 
     return (
-        <div className="container">
+        <div className="container"style={{ fontFamily: 'Poppins, sans-serif' }}>
             <div className="row">
                 {cakeList.map(cake => (
                     <div className="col-md-4" key={cake.id}>
@@ -39,6 +39,8 @@ export default function Home() {
     );
 }
 
+  
+  
  
 
  
