@@ -50,9 +50,6 @@ const InitialRecepiesCakesList = {
         },
         
         
-     
-        
-        
         {
             id: 5,
             name: "Berry Blush Celebration Cake",

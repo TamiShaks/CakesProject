@@ -1,18 +1,18 @@
-import cakeImage1 from './../assets/images/13.jpg';
-import cakeImage2 from './../assets/images/33.jpg';
-import cakeImage3 from './../assets/images/12.jpg';
-import cakeImage4 from './../assets/images/46.jpg';
-import cakeImage5 from './../assets/images/11.jpg';
-import cakeImage6 from './../assets/images/10.jpg';
-import cakeImage7 from './../assets/images/42.jpg';
-import cakeImage8 from './../assets/images/44.jpg';
-import cakeImage9 from './../assets/images/16.jpg';
+import cakeImage7 from './../../../assets/images/42.jpg';//יומלדת ורודה 42
+import cakeImage2 from './../../../assets/images/33.jpg';//חתונה קומות חלקה בנגיעות רוז
+import cakeImage3 from './../../../assets/images/12.jpg';//חתונה פרחים לבנים 12
+import cakeImage4 from './../../../assets/images/46.jpg';//חתונה 4 קומות 46
+import cakeImage1 from './../../../assets/images/13.jpg';//בר נטיפים בורדו 13
+import cakeImage5 from './../../../assets/images/11.jpg';//בר נטיפים צבעוני פירות 11
+import cakeImage8 from './../../../assets/images/44.jpg';//יומולדת תמי 44
+import cakeImage6 from './../../../assets/images/10.jpg';//בר עם שמנת תותים ונענע 10
+import cakeImage9 from './../../../assets/images/16.jpg';//יומולדת צבעונית 16
 
 const RecepiesList = [
   {
     id: 1,
     name: "עוגת שכבות שוקולד עשירה",
-    image: cakeImage6,
+    image: cakeImage1,
     theRecepie: `
 מצרכים:
 - 5 ביצים
@@ -32,7 +32,7 @@ const RecepiesList = [
   {
     id: 2,
     name: "עוגת גבינה עם פירורי בצק",
-    image: cakeImage5,
+    image: cakeImage2,
     theRecepie: `
 מצרכים:
 - 500 גרם גבינה לבנה
@@ -70,7 +70,7 @@ const RecepiesList = [
   {
     id: 4,
     name: "עוגת שוקולד עם פירורים קראנצ'יים",
-    image: cakeImage1,
+    image: cakeImage4,
     theRecepie: `
 מצרכים:
 - 200 גרם שוקולד מריר
@@ -89,7 +89,7 @@ const RecepiesList = [
   {
     id: 5,
     name: "עוגת גבינה עם שכבת ג'לי",
-    image: cakeImage9,
+    image: cakeImage5,
     theRecepie: `
 מצרכים:
 - 2 גביעי גבינה לבנה
@@ -107,7 +107,7 @@ const RecepiesList = [
   {
     id: 6,
     name: "עוגת שכבות וניל עם קישוטים",
-    image: cakeImage2,
+    image: cakeImage6,
     theRecepie: `
 מצרכים:
 - 4 ביצים
@@ -159,7 +159,7 @@ const RecepiesList = [
   {
     id: 9,
     name: "עוגת דבש רכה ואוורירית",
-    image: cakeImage4,
+    image: cakeImage9,
     theRecepie: `
 מצרכים:
 - 3 ביצים

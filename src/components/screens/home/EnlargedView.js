@@ -14,7 +14,10 @@ export const EnlargedView = () => {
 
     const handleInviteCake = () => {
         dispatch(inviteCake(myCake.id));
-        dispatch(addToCart({myCake})) // Dispatch the action to decrement the amount
+        if(myCake.amount>0)
+           dispatch(addToCart({myCake})) // Dispatch the action to decrement the amount
+        else
+           alert("This product is out of stock")
     };
 
     if (!myCake) { 

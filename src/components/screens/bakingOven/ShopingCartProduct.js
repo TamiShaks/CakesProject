@@ -84,7 +84,7 @@ export default function ShopingCartProduct(props) {
             <div className="card-body">
                 <h5 className="card-title">{props.name}</h5>
                 <p className="card-text">{props.description}</p>
-                <p className="card-text"><strong>Price: </strong>${props.price}</p>
+                <p className="card-text"><strong>Price: </strong>${props.price*props.amount}</p>
                 <p className="card-text"><strong>Quantity Ordered: </strong>{props.amount}</p> {/* Displaying the ordered quantity */}
                 <p className="card-text"><small>ID: {props.id}</small></p>
                 <div className="d-flex justify-content-between">
