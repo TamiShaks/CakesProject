@@ -15,11 +15,11 @@ const StyledRating = styled(Rating)(({ theme }) => ({
 }));
 
 const customIcons = {
-  1: { icon: <SentimentVeryDissatisfiedIcon color="error" />, label: 'Very Dissatisfied' },
-  2: { icon: <SentimentDissatisfiedIcon color="error" />, label: 'Dissatisfied' },
-  3: { icon: <SentimentSatisfiedIcon color="warning" />, label: 'Neutral' },
-  4: { icon: <SentimentSatisfiedAltIcon color="success" />, label: 'Satisfied' },
-  5: { icon: <SentimentVerySatisfiedIcon color="success" />, label: 'Very Satisfied' },
+  1: { icon: <SentimentVeryDissatisfiedIcon sx={{ color: '#f8b7c0  ' }} />, label: 'Very Dissatisfied' },
+  2: { icon: <SentimentDissatisfiedIcon sx={{ color: '#ffd3b6  ' }} />, label: 'Dissatisfied' },
+  3: { icon: <SentimentSatisfiedIcon sx={{ color: '#fff9b0' }} />, label: 'Neutral' },
+  4: { icon: <SentimentSatisfiedAltIcon sx={{ color: '#c1f7c0' }} />, label: 'Satisfied' },
+  5: { icon: <SentimentVerySatisfiedIcon sx={{ color: '#b3e5fc' }} />, label: 'Very Satisfied' },
 };
 
 function IconContainer(props) {
