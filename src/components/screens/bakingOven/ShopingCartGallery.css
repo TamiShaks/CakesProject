@@ -1,0 +1,5 @@
+.full-width-product {
+    width: 100%; /* Ensure each product takes the full width */
+    margin-bottom: 10px; /* Space between products */
+    box-sizing: border-box; /* Allows padding/border to be included in total width */
+}
