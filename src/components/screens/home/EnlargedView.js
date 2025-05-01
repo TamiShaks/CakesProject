@@ -205,7 +205,6 @@ export const EnlargedView = () => {
       </Box>
 
       <Typography variant="h6" fontWeight="bold" gutterBottom sx={{ fontFamily: 'Poppins, sans-serif' }}>
-
         You might also like:
       </Typography>
       {/* <Grid container spacing={2} justifyContent="center">
@@ -221,25 +220,28 @@ export const EnlargedView = () => {
   {cakeList
     .filter(cake => ((cake.shape === myCake.shape) && (cake.color === myCake.color)) || (cake.Characteristic === myCake.Characteristic))
     .map(cake => (
-      <Grid item xs={4} sm={3} md={2} key={cake.id} textAlign="center">
-        <a href={`/bigViewe/${cake.id}`} style={{ textDecoration: 'none' }}>
-          <img
-            src={cake.image}
-            alt={cake.name}
-            style={{
-              width: '100px',
-              height: '100px',
-              objectFit: 'cover',
-              borderRadius: '10px',
-              border: '2px solid #fbd4c6',
-              transition: 'transform 0.3s ease',
-            }}
-            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
-            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-          />
-        </a>
-      </Grid>
-    ))}
+<Product {...cake} />                            ))
+    // .map(cake => (
+    //   <Grid item xs={4} sm={3} md={2} key={cake.id} textAlign="center">
+    //     <a href={`/bigViewe/${cake.id}`} style={{ textDecoration: 'none' }}>
+    //       <img
+    //         src={cake.image}
+    //         alt={cake.name}
+    //         style={{
+    //           width: '100px',
+    //           height: '100px',
+    //           objectFit: 'cover',
+    //           borderRadius: '10px',
+    //           border: '2px solid #fbd4c6',
+    //           transition: 'transform 0.3s ease',
+    //         }}
+    //         onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
+    //         onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+    //       />
+    //     </a>
+    //   </Grid>
+    // ))
+    }
 </Grid>
     </Container>
   );

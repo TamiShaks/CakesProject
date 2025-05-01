@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Product from './Product';
-import ShopingCartProduct from '../bakingOven/ShopingCartProduct';
+import SmallShopingCartProduct from '../bakingOven/SmallShopingCartProduct';
 import './home.css'; // Ensure this file contains the necessary styles.
 
 export default function Home() {
@@ -50,7 +50,7 @@ export default function Home() {
                     <div className="col-md-3 sidebar">
                         <div className="cart-header">סל הקניות שלך</div>
                         {invitedCakeList.map(cake => (
-                            <ShopingCartProduct key={cake.id} {...cake} className="small-cart-product" />
+                            <SmallShopingCartProduct key={cake.id} {...cake} className="small-cart-product" />
                         ))}
                     </div>
                 )}
