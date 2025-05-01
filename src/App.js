@@ -91,7 +91,6 @@ function App() {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        
         <BrowserRouter>
           <AppRoutes />
         </BrowserRouter>
