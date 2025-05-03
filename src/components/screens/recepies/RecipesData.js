@@ -11,387 +11,375 @@ import cakeImage9 from './../../../assets/images/16.jpg';//יומולדת צבע
 const RecepiesList = [
   {
     id: 1,
-    name: "🍫 עוגה ורודה עם זילוף שוקולד ופרחים",
+    name: "🍫 Pink Cake with Chocolate Frosting and Flowers",
     image: cakeImage1,
     theRecepie: `
-מצרכים:
-- 5 ביצים
-- כוס סוכר
-- כוס קמח תופח
-- 100 גרם שוקולד מריר
-- חצי כוס שמנת מתוקה
+Ingredients:
+- 5 eggs
+- 1 cup sugar
+- 1 cup self-rising flour
+- 100 grams dark chocolate
+- 1/2 cup heavy cream
 
-הוראות הכנה:
-1. להקציף את הביצים עם הסוכר עד לקצף תפוח ובהיר.
-2. להמיס את השוקולד עם השמנת ולקרר מעט.
-3. לקפל את הקמח והשוקולד לתערובת.
-4. לאפות בתבנית מרופדת ב-180 מעלות כ-30 דקות.
-5. לקרר, לפרוס ולמלא בקרם שוקולד בין השכבות.
+Instructions:
+1. Whip the eggs with the sugar until light and fluffy.
+2. Melt the chocolate with the cream and let it cool slightly.
+3. Fold the flour and chocolate mixture into the batter.
+4. Bake in a lined pan at 180°C (350°F) for about 30 minutes.
+5. Cool, slice, and fill with chocolate cream between the layers.
     `
   },
   {
     id: 2,
-    name:" עוגת קומות אלגנטית",
+    name: "Elegant Tiered Cake",
     image: cakeImage2,
     theRecepie: `
-    🧁 לעוגה (2 תבניות 20 ס"מ + 15 ס"מ):
+    🧁 For the cake (2 pans of 20 cm + 15 cm):
 
-    2.5 כוסות קמח
+    2.5 cups flour
     
-    2 כפיות אבקת אפייה
+    2 teaspoons baking powder
     
-    ½ כפית מלח
+    1/2 teaspoon salt
     
-    200 גרם חמאה רכה
+    200 grams softened butter
     
-    1.5 כוסות סוכר
+    1.5 cups sugar
     
-    4 ביצים
+    4 eggs
     
-    1 כף תמצית וניל
+    1 tablespoon vanilla extract
     
-    1 כוס חלב
+    1 cup milk
     
-    🧁 לקרם חמאה וניל:
+    🧁 For the vanilla buttercream:
     
-    300 גרם חמאה רכה
+    300 grams softened butter
     
-    500 גרם אבקת סוכר
+    500 grams powdered sugar
     
-     1 כפית תמצית וניל
+    1 teaspoon vanilla extract
     
-    צבע מאכל ורוד לקישוט (לשושנים)
+    Pink food coloring for decoration (roses)
     
-    הוראות הכנה:
+    Instructions:
     
-    לחמם תנור ל־175 מעלות. לשמן תבניות.
+    Preheat the oven to 175°C (350°F). Grease the pans.
     
-    לערבב את המרכיבים היבשים. בקערה נפרדת להקציף חמאה וסוכר, להוסיף ביצים ווניל.
+    Mix the dry ingredients. In a separate bowl, whip butter and sugar, then add eggs and vanilla.
     
-    לשלב את החלב והקמח לסירוגין.
+    Alternate adding milk and flour mixture.
     
-    לאפות 30–40 דקות. לקרר.
+    Bake for 30–40 minutes. Cool completely.
     
-    להכין את הקרם, לקשט את העוגות, ולבנות את הקומות עם תומכים.
-    
-    
+    Prepare the buttercream, decorate the cakes, and assemble the tiers with supports.
     `
   },
   {
     id: 3,
-    name:"🍰 עוגת נייקד עם ורדים לבנים",
+    name: "🍰 Naked Cake with White Roses",
     image: cakeImage3,
     theRecepie: `
-    בסיס שוקולד:
+    Chocolate Base:
 
-    200 גרם שוקולד מריר
+    200 grams dark chocolate
     
-    200 גרם חמאה
+    200 grams butter
     
-    1 כוס סוכר
+    1 cup sugar
     
-    4 ביצים
+    4 eggs
     
-    1.5 כוסות קמח תופח
+    1.5 cups self-rising flour
     
-    קרם גבינה:
+    Cheese Cream:
     
-    500 גרם גבינת שמנת
+    500 grams cream cheese
     
-    1/2 כוס אבקת סוכר
+    1/2 cup powdered sugar
     
-    1 כפית תמצית וניל
+    1 teaspoon vanilla extract
     
-    250 מ"ל שמנת מתוקה
+    250 ml heavy cream
     
-    קישוט:
+    Decoration:
     
-    פרחי סוכר או פרחים טבעיים
+    Sugar flowers or natural flowers
     
-    אופן ההכנה:
+    Instructions:
     
-    ממיסים שוקולד וחמאה, מוסיפים סוכר וביצים בהדרגה.
+    Melt chocolate and butter, add sugar and eggs gradually.
     
-    מוסיפים קמח ומערבבים לתערובת אחידה.
+    Add flour and mix until smooth.
     
-    אופים בתבנית ב-170 מעלות כ־35 דקות.
+    Bake in a pan at 170°C (340°F) for about 35 minutes.
     
-    מקציפים את כל חומרי הקרם.
+    Whip all the cream ingredients together.
     
-    מניחים שכבה – קרם – שכבה – קרם, ללא ציפוי חיצוני מלא ("נייקד").
+    Layer cake – cream – cake – cream, leaving the sides exposed ("naked").
     
-    מקשטים בפרחים לבנים בעדינות.
-    
-    
+    Decorate gently with white flowers.
     `
   },
   {
     id: 4,
-    name:" עוגת חתונה לבנה עם פרחים",
+    name: "White Wedding Cake with Flowers",
     image: cakeImage4,
     theRecepie: `
-    מצרכים:
+    Ingredients:
 
-    בסיס עוגת וניל/שוקולד בשלוש תבניות בקוטר שונה
+    Vanilla/chocolate cake base in three different-sized pans
     
-    בצק סוכר לבן
+    White fondant
     
-    קצפת יציבה לציפוי
+    Stable whipped cream for coating
     
-    פנינים סוכר לקישוט
+    Sugar pearls for decoration
     
-    פרחים מבצק סוכר
+    Sugar paste flowers
     
-    אופן ההכנה:
+    Instructions:
     
-    אופים 3 שכבות בגדלים שונים.
+    Bake 3 layers in different sizes.
     
-    מצפים כל שכבה בקצפת ומצפים בבצק סוכר.
+    Coat each layer with whipped cream and cover with fondant.
     
-    מסדרים שכבות אחת על גבי השנייה.
+    Stack the layers on top of each other.
     
-    מקשטים בפנינים ובפרחים.
+    Decorate with pearls and flowers.
     `
   },
   {
     id: 5,
-    name:" 🍓 עוגת פירות וקרם עם קישוטים",
+    name: "🍓 Fruit and Cream Cake with Decorations",
     image: cakeImage5,
     theRecepie: `
-    מצרכים לעוגה:
+    Ingredients for the cake:
 
-    5 ביצים
+    5 eggs
     
-    1 כוס סוכר
+    1 cup sugar
     
-    1 כוס שמן
+    1 cup oil
     
-    1 כוס חלב
+    1 cup milk
     
-    2 כפיות תמצית וניל
+    2 teaspoons vanilla extract
     
-    2.5 כוסות קמח תופח
+    2.5 cups self-rising flour
     
-    לקרם:
+    For the cream:
     
-    500 מ"ל שמנת מתוקה
+    500 ml heavy cream
     
-    1/2 כוס אבקת סוכר
+    1/2 cup powdered sugar
     
-    צבע מאכל ורוד
+    Pink food coloring
     
-    קישוט:
+    Decoration:
     
-    פירות יער, מנדרינות, קישוטים מוזהבים
+    Berries, mandarins, golden decorations
     
-    אופן ההכנה:
+    Instructions:
     
-    טורפים ביצים וסוכר עד לתערובת בהירה.
+    Beat eggs and sugar until light and fluffy.
     
-    מוסיפים שמן, חלב ותמצית וניל ומערבבים.
+    Add oil, milk, and vanilla extract and mix.
     
-    מוסיפים קמח ומערבבים עד שאין גושים.
+    Add flour and mix until smooth.
     
-    מחלקים את הבלילה לשתי תבניות ואופים ב-170 מעלות כ־30 דקות.
+    Divide the batter into two pans and bake at 170°C (340°F) for about 30 minutes.
     
-    מקציפים את הקרם, צובעים ורוד, ומורחים בין השכבות ומסביב.
+    Whip the cream, color it pink, and spread between the layers and around the cake.
     
-    מקשטים בפירות וקישוטים לבחירה.
-    
-    
-    
+    Decorate with fruits and decorations of your choice.
     `
   },
   {
     id: 6,
-    name: " עוגת וניל עם קרם וניל ופירות יער",
+    name: "Vanilla Cake with Vanilla Cream and Berries",
     image: cakeImage6,
     theRecepie: `
-    🧁 לעוגה (2 תבניות עגולות 20 ס"מ):
-    4 ביצים-
+    🧁 For the cake (2 round pans, 20 cm):
+    4 eggs-
     
-    1 כוס סוכר-
+    1 cup sugar-
     
-    1 כוס שמן קנולה-
+    1 cup canola oil-
     
-    1 כוס חלב-
+    1 cup milk-
     
-    1 כף תמצית וניל-
+    1 tablespoon vanilla extract-
     
-    2 כוסות קמח תופח-
+    2 cups self-rising flour-
     
-    קורט מלח
+    Pinch of salt
     
-    🥣 אופן ההכנה:
-    חממי תנור ל-180 מעלות.
+    🥣 Instructions:
+    Preheat the oven to 180°C (350°F).
     
-    טרפי ביצים וסוכר כ-5 דקות לקצף בהיר.
+    Beat eggs and sugar for about 5 minutes until light and fluffy.
     
-    הוסיפי שמן, חלב, תמצית וניל – טרפי עוד קצת.
+    Add oil, milk, and vanilla extract – beat a little more.
     
-    נפי פנימה את הקמח והמלח וערבבי בעדינות.
+    Sift in the flour and salt and mix gently.
     
-    חלקי ל-2 תבניות אפייה עגולות ואפי 25–30 דקות עד שקיסם יוצא יבש.
+    Divide into 2 round baking pans and bake for 25–30 minutes until a toothpick comes out clean.
     
-    צנני היטב לפני ציפוי.
+    Cool completely before frosting.
     
-    🍦 לקרם וניל לקישוט ולציפוי:-
-    500 מ"ל שמנת מתוקה להקצפה (או ריץ’)-
+    🍦 For the vanilla cream frosting:
+    500 ml heavy whipping cream (or non-dairy cream)-
     
-    2 כפות אינסטנט פודינג וניל-
+    2 tablespoons instant vanilla pudding mix-
     
-    3 כפות אבקת סוכר-
+    3 tablespoons powdered sugar-
     
-    1/2 כפית תמצית וניל-
+    1/2 teaspoon vanilla extract-
     
-    (אופציונלי: גביע מסקרפונה או קצפת פרווה מוקצפת ליציבות)-
+    (Optional: mascarpone or whipped non-dairy cream for stability)-
     
-    הקציפי הכל יחד עד שמתקבל קרם יציב ורך.
+    Whip everything together until a stable and soft cream forms.
     
-    🍓 לקישוט:
-    פטל אדום-
-    אוכמניות-
-    פטל שחור (או תות חתוך)-
-    עלי נענע טריים-
-    שקדים פרוסים או שוקולד לבן לגרוד (אופציונלי)-
+    🍓 For decoration:
+    Red raspberries-
+    Blueberries-
+    Blackberries (or sliced strawberries)-
+    Fresh mint leaves-
+    Sliced almonds or grated white chocolate (optional)-
     
-    🧑‍🍳 הרכבה:
-    הניחי שכבה אחת של עוגה.
+    🧑‍🍳 Assembly:
+    Place one cake layer.
     
-    מרחי שכבת קרם, פירות, ואז שכבת עוגה נוספת.
+    Spread a layer of cream, fruits, then another cake layer.
     
-    צפי את כל העוגה בקרם חלק מבחוץ (אפשר בסגנון מרושל כמו בתמונה).
+    Coat the entire cake with smooth cream on the outside (can be rustic style as in the picture).
     
-    קשטי בקצפת, פירות טריים ועלי נענע.
+    Decorate with whipped cream, fresh fruits, and mint leaves.
     `
-    
   },
   {
     id: 7,
-    name: "🎉 עוגת יום הולדת צבעונית" ,
+    name: "🎉 Colorful Birthday Cake",
     image: cakeImage7,
     theRecepie: `
-    🎂 לעוגה (תבנית עגולה 22–24 ס"מ):
+    🎂 For the cake (round pan 22–24 cm):
 
-    2 כוסות קמח
+    2 cups flour
     
-    2 כפיות אבקת אפייה
+    2 teaspoons baking powder
     
-    ½ כפית מלח
+    1/2 teaspoon salt
     
-    200 גרם חמאה
+    200 grams butter
     
-    1.5 כוסות סוכר
+    1.5 cups sugar
     
-    4 ביצים
+    4 eggs
     
-    1 כף תמצית וניל
+    1 tablespoon vanilla extract
     
-    ¾ כוס חלב
+    3/4 cup milk
     
-    ⅓ כוס קונפטי צבעוני (אכיל)
+    1/3 cup edible confetti
     
-    🎂 לקרם חמאה צבעוני:
+    🎂 For the colorful buttercream:
     
-    250 גרם חמאה
+    250 grams butter
     
-    400 גרם אבקת סוכר
+    400 grams powdered sugar
     
-    1 כף חלב
+    1 tablespoon milk
     
-    צבעי מאכל ורוד ותכלת
+    Pink and blue food coloring
     
-    קונפטי צבעוני לקישוט
+    Edible confetti for decoration
     
-    הוראות הכנה:
+    Instructions:
     
-    לערבב את המרכיבים היבשים. בקערה נפרדת להקציף חמאה וסוכר.
+    Mix the dry ingredients. In a separate bowl, whip butter and sugar.
     
-    להוסיף ביצים, וניל וחלב לסירוגין עם הקמח. לקפל פנימה קונפטי.
+    Add eggs, vanilla, and milk alternately with the flour. Fold in the confetti.
     
-    לאפות כ־35 דקות. לקרר.
+    Bake for about 35 minutes. Cool completely.
     
-    להכין את הקרם בצבעים, לקשט בעזרת צנתרים ולהדביק קונפטי.
+    Prepare the cream in colors, decorate with piping tips, and stick confetti.
     `
   },
   {
     id: 8,
-    name:" 🎉 עוגת מוס וניל עם סוכריות צבעוניות",
+    name: "🎉 Vanilla Mousse Cake with Colorful Sprinkles",
     image: cakeImage8,
     theRecepie: `
-    מצרכים:
+    Ingredients:
 
-    2 שכבות ביסקוויטים/עוגת ספוג
+    2 layers of biscuits/sponge cake
     
-    2 מיכלים שמנת מתוקה להקצפה
+    2 containers of heavy whipping cream
     
-    1 אינסטנט פודינג וניל
+    1 instant vanilla pudding mix
     
-    חצי כוס חלב
+    1/2 cup milk
     
-    סוכריות צבעוניות לקישוט
+    Colorful sprinkles for decoration
     
-    אופן ההכנה:
+    Instructions:
     
-    מקציפים שמנת, חלב ואינסטנט פודינג עד קבלת מוס יציב.
+    Whip cream, milk, and pudding mix until a stable mousse forms.
     
-    מניחים שכבת ביסקוויטים, שכבת מוס, שוב ביסקוויטים ומוס.
+    Place a layer of biscuits, a layer of mousse, then repeat with biscuits and mousse.
     
-    מקררים למשך 4 שעות לפחות.
+    Chill for at least 4 hours.
     
-    מפזרים סוכריות צבעוניות לפני ההגשה.
+    Sprinkle colorful sprinkles before serving.
     `
   },
   {
     id: 9,
-    name:"🌈 עוגת קשת בענן עם נרות",
+    name: "🌈 Rainbow Cake with Candles",
     image: cakeImage9,
     theRecepie: `
-    בסיס וניל צבעוני:
+    Colorful Vanilla Base:
 
-    2 כוסות קמח
+    2 cups flour
     
-    2 כפיות אבקת אפייה
+    2 teaspoons baking powder
     
-    1/2 כפית מלח
+    1/2 teaspoon salt
     
-    1 כוס חמאה
+    1 cup butter
     
-    1.5 כוסות סוכר
+    1.5 cups sugar
     
-    4 ביצים
+    4 eggs
     
-    3/4 כוס חלב
+    3/4 cup milk
     
-    צבעי מאכל: אדום, כתום, צהוב, ירוק, כחול, סגול
+    Food coloring: red, orange, yellow, green, blue, purple
     
-    קרם חמאה:
+    Buttercream:
     
-    250 גרם חמאה
+    250 grams butter
     
-    2.5 כוסות אבקת סוכר
+    2.5 cups powdered sugar
     
-    2 כפיות תמצית וניל
+    2 teaspoons vanilla extract
     
-    קישוט:
+    Decoration:
     
-    סוכריות צבעוניות, נרות
+    Colorful sprinkles, candles
     
-    אופן ההכנה:
+    Instructions:
     
-    מכינים בלילה בסיסית ומחלקים ל-6 קערות.
+    Prepare a basic batter and divide it into 6 bowls.
     
-    מוסיפים לכל קערה צבע מאכל אחר.
+    Add a different food coloring to each bowl.
     
-    אופים כל צבע בנפרד (תבניות קטנות) או שכבה-שכבה.
+    Bake each color separately (small pans) or layer by layer.
     
-    מקררים, מניחים שכבות אחת על השנייה עם קרם ביניהן.
+    Cool, stack the layers with cream in between.
     
-    מצפים בקרם וניל לבן, מקשטים בסוכריות ונרות.
-    
-    
-    
-    
+    Coat with white vanilla cream, decorate with sprinkles and candles.
     `
   }
 ];
