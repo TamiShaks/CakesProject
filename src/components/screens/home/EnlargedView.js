@@ -218,7 +218,7 @@ export const EnlargedView = () => {
       </Grid> */}
       <Grid container spacing={2} justifyContent="center">
   {cakeList
-    .filter(cake => ((cake.shape === myCake.shape) && (cake.color === myCake.color)) || (cake.Characteristic === myCake.Characteristic))
+    .filter(cake => ((cake.shape === myCake.shape) && (cake.color === myCake.color)) || (cake.Characteristic1 === myCake.Characteristic1)||(cake.Characteristic2 === myCake.Characteristic2))
     .map(cake => (
 <Product {...cake} />                            ))
     // .map(cake => (

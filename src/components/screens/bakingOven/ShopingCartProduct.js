@@ -97,7 +97,7 @@ export default function ShopingCartProduct(props) {
           <h5 className="card-title mb-1">{props.name}</h5>
           <p className="card-text mb-1 text-muted">{props.description}</p>
           <p className="card-text mb-1">כמות: {props.amount}</p>
-          <p className="card-text mb-1">סה״כ: ₪{(props.amount * props.price).toLocaleString()}</p>
+          <p className="card-text mb-1">סה״כ: ${(props.amount * props.price).toLocaleString()}</p>
           <small className="text-muted">מזהה: {props.id}</small>
         </div>
 

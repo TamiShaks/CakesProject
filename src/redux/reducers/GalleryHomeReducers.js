@@ -46,44 +46,47 @@ const InitialCakesList = {
                 name: "Berry Blush Celebration Cake",
                 image: cakeImage11, // replace with the actual image path
                 description: "A vibrant two-tier cake with pink drips, fresh berries, buttercream flowers, and golden decorations.",
-                price: 18.00,
+                price: 100.00,
                 amount:2
-                ,shake:" circle",
-                color:"pink"
-                ,Characteristic:"fruts"
+                ,shake:"circle",
+                color:"pinky"
+                ,Characteristic1:"fruts"
+                ,Characteristic2:"Icicles"
             },
             {
                 id: 2,
                 name: " Rosette Romance Cake",
                 image: cakeImage12, // replace with the actual image path
                 description: "Minimalist two-tier cake with soft blush rosettes and golden accents. ",
-                price: 34.00,
+                price: 97.00,
                 amount:2
-                ,shake:" circle",
-                color:"white"
-                ,Characteristic:"Tiered"
+                ,shake:"circle",
+                color:"whiteRose"
+                ,Characteristic1:"Tiered"
             },
             {
                 id: 3,
                 name: "Blush Rose Drip Cake",
                 image: cakeImage13,  // replace with the actual image path
                 description: "A tall boutique cake in soft blush and chocolate tones, topped with elegant sugar flowers and glossy chocolate drips. ",
-                price: 26.00,
+                price: 80.00,
                 amount:3
-                ,shake:" circle",
-                color:"Light brown"
-                ,Characteristic:"elegant"
+                ,shake:"circle",
+                color:"Lightbrown"
+                ,Characteristic1:"elegant"
+                ,Characteristic2:"Icicles"
             },
             {
                 id: 4,
                 name: "Pink Raspberry Drizzle Cake",
                 image: cakeImage19,  // replace with the actual image path
                 description: " A luscious pink drip cake topped with raspberry goodness and a sweet, delicate glaze. ",
-                price: 14.00,
+                price: 43.00,
                 amount:6
-                ,shake:" circle",
-                color:"pink"
-                ,Characteristic:"fruts"
+                ,shake:"circle",
+                color:"pinky"
+                ,Characteristic1:"fruts"
+                ,Characteristic2:"Icicles"
     
             },
             {
@@ -91,11 +94,11 @@ const InitialCakesList = {
                 name: " Pastel Sprinkle Birthday Cake",
                 image: cakeImage28,  // replace with the actual image path
                 description: "Pastel birthday cake with pink swirls, sprinkles & golden message.",
-                price: 21.00,
-                amount:2            
-                ,shake:" circle",
+                price: 39.00,
+                amount:10            
+                ,shake:"circle",
                 color:"pink"
-                ,Characteristic:"Sprinkle Birthday"
+                ,Characteristic1:"Sprinkle Birthday"
     
             }
             ,
@@ -104,22 +107,22 @@ const InitialCakesList = {
                 name: "Rainbow Celebration Cake",
                 image: cakeImage16,  // replace with the actual image path
                 description: "A fun and colorful rainbow-layered cake with vibrant sprinkles and playful candles.",
-                price: 27.00,
+                price: 67.00,
                 amount:2
-                ,shape:" circle",
+                ,shape:"circle",
                 color:"colorfull"
-                ,Characteristic:"Sprinkle Birthday"
+                ,Characteristic1:"Sprinkle Birthday"
             },
         {
             id: 7,
             name: "  Vanilla Sprinkle Delight",
             image: cakeImage26,  // replace with the actual image path
             description: " Light vanilla cream cake with rainbow sprinkles." ,
-            price: 14.00,
+            price: 79.00,
             amount:6           
-            ,shake:" circle",
+            ,shake:"circle",
             color:"white"
-            ,Characteristic:"Sprinkle Birthday"
+            ,Characteristic1:"Sprinkle Birthday"
 
         },
         {
@@ -127,9 +130,9 @@ const InitialCakesList = {
             name: "Mango Mirror Cake",
             image: cakeImage7,  // replace with the actual image path
             description: "A minimalist mousse cake with a vibrant mango glaze. ",
-            price: 14.00,
+            price: 80.00,
             amount:4
-            ,shake:" circle",
+            ,shake:"circle",
             color:"orange"
             ,Characteristic:"solid"
 
@@ -141,9 +144,9 @@ const InitialCakesList = {
             description: "A luxurious white-tiered cake adorned with sugar pearls and delicate roses. "         ,
             price: 47.00,
             amount:1            
-            ,shake:" circle",
+            ,shake:"circle",
             color:"white"
-            ,Characteristic:"Tiered"
+            ,Characteristic1:"Tiered"
 
         },
         {
@@ -151,11 +154,11 @@ const InitialCakesList = {
             name: " Classic Mille-Feuille",
             image: cakeImage31,  // replace with the actual image path
             description: "A delicate French pastry with layers of crisp puff pastry and smooth vanilla cream, dusted with powdered sugar. "           ,
-            price: 27.00,
-            amount:1           
-            ,shake:" rectangle",
+            price: 50.00,
+            amount:7           
+            ,shake:"rectangle",
             color:"white"
-            ,Characteristic:"layers"
+            ,Characteristic1:"layers"
 
         },
         {
@@ -163,11 +166,11 @@ const InitialCakesList = {
             name: "Citrus Berry Delight",
             image: cakeImage32,  // replace with the actual image path
             description: "A refreshing cake topped with tangy orange slices, fresh blueberries, and a hint of mint, all over a smooth cream frosting. " ,
-            price: 15.00,
+            price: 89.00,
             amount:2            
-            ,shake:" circle",
+            ,shake:"circle",
             color:"orange"
-            ,Characteristic:"fruts"
+            ,Characteristic1:"fruts"
 
         },
         {
@@ -175,22 +178,22 @@ const InitialCakesList = {
             name: "Chocolate Fruit Celebration Cake",
             image: cakeImage23, // replace with the actual image path
             description: "A festive chocolate cake topped with fresh fruits and glistening jelly.",
-            price: 16.00,
-            amount:2
+            price: 67.00,
+            amount:4
             ,shake:" circle",
             color:"Light brown"
-            ,Characteristic:"fruts"
+            ,Characteristic1:"fruts"
         },
         {
             id: 13,
             name: " Elegant Vanilla Blossom Cake",
             image: cakeImage33,  // replace with the actual image path
             description: "A classic tiered cake with smooth vanilla frosting and delicate floral accents in soft dusty pink. " ,
-            price: 28.00,
+            price: 97.00,
             amount:2
-            ,shake:" circle",
+            ,shake:"circle",
             color:"cream" 
-            ,Characteristic:"Tiered"
+            ,Characteristic1:"Tiered"
 
         },
         {
@@ -198,9 +201,9 @@ const InitialCakesList = {
             name: "legant Monochrome Bow Cake",
             image: cakeImage14, // replace with the actual image path
             description: " A chic, minimalistic birthday cake adorned with elegant black bows and delicate white frosting. ",
-            price: 13.00,
+            price: 50.00,
             amount:6
-            ,shake:" circle",
+            ,shake:"circle",
             color:"black"
             ,Characteristic:"Fabric ribbons"
         },
@@ -209,75 +212,75 @@ const InitialCakesList = {
             name: "Back to School Birthday Cake",
             image: cakeImage15, // replace with the actual image path
             description: "A fun two-tier birthday cake decorated with school-themed fondant accents. ",
-            price: 14.00,
+            price: 78.00,
             amount:6
-            ,shake:" circle",
+            ,shake:"circle",
             color:"colorful"
-            ,Characteristic:"Sprinkle Birthday"
+            ,Characteristic1:"Sprinkle Birthday"
         },
         {
             id: 16,
             name: "Gothic Rose Cake",
             image: cakeImage21, // replace with the actual image path
             description: "A dramatic black-and-white cake adorned with black roses and dripping ganache",
-            price: 40.00,
+            price: 113.00,
             amount:2
-            ,shake:" circle",
+            ,shake:"circle",
             color:"black"
-            ,Characteristic:"Tiered"
+            ,Characteristic1:"Tiered"
         },
         {
             id: 17,
             name: "Silver Sparkle Cake",
             image: cakeImage17, // replace with the actual image path
             description: "A sophisticated silver glitter cake with a shimmering finish, ideal for an elegant celebration.",
-            price: 18.00,
+            price: 67.00,
             amount:3
-            ,shake:" circle",
+            ,shake:"circle",
             color:"gray"
-            ,Characteristic:"romantic"
+            ,Characteristic1:"romantic"
         },
         {
             id: 18,
             name: "Midnight Sparkle Cake",
             image: cakeImage18, // replace with the actual image path
             description: "A stunning blue cake with silver sugar pearls, creating a festive and elegant vibe. ",
-            price: 22.00,
-            amount:2
-            ,shake:" circle",
+            price: 59.00,
+            amount:4
+            ,shake:"circle",
             color:"blue"
-            ,Characteristic:"romantic"
+            ,Characteristic1:"romantic"
         },
         {
             id:19,
             name: "Elegant Rose Cake",
             image: cakeImage4,  // replace with the actual image path
             description: " A classic and romantic cake with delicate buttercream roses and soft, creamy details.",
-            price: 27.00,
-            amount:2
-            ,shape:" heart",
+            price: 68.00,
+            amount:6
+            ,shape:"heart",
             color:"white"
-            ,Characteristic:"flawers"
+            ,Characteristic1:"flawers"
         },
         {
             id: 20,
             name: "Timeless Bow Cake",
             image: cakeImage5, // replace with the actual image path
             description: "A refined cake with a satin-like ribbon design and elegant candles.",
-            price: 22.00,
+            price: 72.00,
             amount:3
-            ,shake:" circle",
+            ,shake:"circle",
             color:"white"
-            ,Characteristic:"ribbons"
+            ,Characteristic1:"ribbons"
         },
         {
             id:21,
             name: "Whimsical Ribbons Cake",
             image: cakeImage6, // replace with the actual image path
             description: "A charming birthday cake adorned with white ribbon details and soft piped icing.",
-            price: 25.00,
-            amount:2
-            ,shake:" circle",
+            price: 51.00,
+            amount:5
+            ,shake:"circle",
             color:"white"
             ,Characteristic:"Fabric ribbons"
         },
@@ -286,33 +289,33 @@ const InitialCakesList = {
             name: "Strawberry Layer Cake",
             image: cakeImage22,  // replace with the actual image path
             description: "A light and fresh cake with layers of chocolate, cream, and fresh strawberries. ",
-            price:20,
+            price:62,
             amount:8
             ,shape:"circle",
             color:"red"
-            ,Characteristic:"layers"
+            ,Characteristic1:"layers"
         },
         {
             id: 23,
             name: "Birthday Wishes Cake",
             image: cakeImage3, // replace with the actual image path
             description: "A minimalistic cake with a bold 'It's My Birthday!' message, perfect for a fun and modern birthday celebration.",
-            price: 25.00,
-            amount:2
-            ,shake:" circle",
+            price: 64.00,
+            amount:7
+            ,shake:"circle",
             color:"pink"
-            ,Characteristic:"modernbirthday"
+            ,Characteristic1:"modernbirthday"
         },
         {
             id: 24,
             name: "  Dark Chocolate Berry Bliss",
             image: cakeImage27,  // replace with the actual image path
             description: "Dark chocolate cake with berries & pomegranate.",
-            price: 16.00,
+            price: 67.00,
             amount:5          
-            ,shake:" circle",
+            ,shake:"circle",
             color:"Light brown"
-            ,Characteristic:"fruts"
+            ,Characteristic1:"fruts"
         }
         ,
         {
@@ -320,22 +323,22 @@ const InitialCakesList = {
             name: "Forest Mushroom Cake",
             image: cakeImage20, // replace with the actual image path
             description: "A nature-inspired cake topped with edible mushrooms and earthy accents.",
-            price: 19.00,
+            price: 54.00,
             amount:4
-            ,shake:" circle",
+            ,shake:"circle",
             color:"brown"
-            ,Characteristic:"vegetable"
+            ,Characteristic1:"vegetable"
         },
         {
             id: 26,
             name: "Hazelnut Mocha Drizzle Cake",
             image: cakeImage25,  // replace with the actual image path
             description: "A decadent mocha cake with silky hazelnut cream swirls, crunchy caramelized nuts, and a rich chocolate ganache drip. Elegance and flavor in every bite.",
-            price: 21.00,
+            price:85.00,
             amount:2
-            ,shake:" circle",
+            ,shake:"circle",
             color:"moka"
-            ,Characteristic:"nuts"
+            ,Characteristic1:"nuts"
 
         },
         {
@@ -343,22 +346,22 @@ const InitialCakesList = {
             name: " Golden Bloom Cake",
             image: cakeImage24, // replace with the actual image path
             description: "Elegant two-tier white cake adorned with handcrafted white flowers and golden leaves.",
-            price: 38,
+            price:89,
             amount:2
-            ,shake:" circle",
+            ,shake:"circle",
             color:"white"
-            ,Characteristic:"Tiered"
+            ,Characteristic1:"Tiered"
         },
         {
             id: 28,
             name: " Romantic Heart Cake",
             image: cakeImage1,  // replace with the actual image path
             description: "A charming cake decorated with soft pink buttercream, small black heart sprinkles, and delicate ribbon details. ",
-            price: 17.00,
+            price: 58.00,
             amount:4 
-            ,shake:" circle",
+            ,shake:"circle",
             color:"pink"
-            ,Characteristic:"Fabric ribbons"
+            ,Characteristic1:"Fabric ribbons"
 
         },
         {
@@ -366,9 +369,9 @@ const InitialCakesList = {
             name: "Sweet Sixteen Bliss",
             image: cakeImage8, // replace with the actual image path
             description: "A beautiful pastel pink cake adorned with fresh flowers and a shiny '16'",
-            price: 20.00,
+            price: 76.00,
             amount:4
-            ,shake:" circle",
+            ,shake:"circle",
             color:"pink"
             ,Characteristic:"flawers"
         },
@@ -377,33 +380,33 @@ const InitialCakesList = {
             name: "Sprinkle Celebration Cake",
             image: cakeImage9, // replace with the actual image path
             description: "A fun, colorful cake topped with chocolate balls and colorful sprinkles",
-            price: 25.00,
+            price: 48.00,
             amount:2
-            ,shake:" circle",
+            ,shake:"circle",
             color:"brown"   
-            ,Characteristic:"Sprinkle Birthday"
+            ,Characteristic1:"Sprinkle Birthday"
         },
         {
             id: 31,
             name: "Berry Bliss Cake",
             image: cakeImage10,  // replace with the actual image path
             description: "Luscious berry-topped cake with rich whipped frosting and fresh mint accents. ",
-            price: 27.00,
+            price: 89.00,
             amount:2
-            ,shape:" circle",
+            ,shape:"circle",
             color:"white"
-            ,Characteristic:"fruts"
+            ,Characteristic1:"fruts"
         },
         {
             id: 32,
             name: "  Berry Cheesecake",
             image: cakeImage29,  // replace with the actual image path
             description: "Light cheesecake with mixed berries and physalis" ,
-            price: 25.00,
+            price: 89.00,
             amount:4
-            ,shake:" circle",
+            ,shake:"circle",
             color:"white"
-            ,Characteristic:"cheesecake"
+            ,Characteristic1:"cheesecake"
 
         },
         {
@@ -411,11 +414,11 @@ const InitialCakesList = {
             name: "solid birthday Cake",
             image: cakeImage2, // replace with the actual image path
             description: "A delightful pink cake with elegant ruffles",
-            price: 20.00,
+            price: 75.00,
             amount:4
-            ,shake:" circle",
+            ,shake:"circle",
             color:"pink"
-            ,Characteristic:"modernbirthday"
+            ,Characteristic1:"modernbirthday"
         },
     ]
 };
