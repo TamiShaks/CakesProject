@@ -3,7 +3,6 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { Typography, Button, Container, Box, Grid } from '@mui/material';
-import Product from './Product';
 import { addToCart, inviteCake } from '../../../redux/actions';
 
 export const EnlargedView = () => {

@@ -1,10 +1,13 @@
 import './Product.css';
 import React from 'react';
 import { Link } from "react-router-dom";
-
+import { useState, useEffect } from 'react';
 export default function Product(props) {
-    const isOutOfStock = props.amount === 0;
-
+    const [isOutOfStock, setIsOutOfStock] = useState( props.amount === 0);
+    useEffect(() => {
+        setIsOutOfStock(props.amount === 0);
+      }, [props.amount]);
+    
     return (
         <div className="card" style={{ position: 'relative', width: '18rem', margin: '10px' }}>
             <Link to={`/bigViewe/${props.id}`}>

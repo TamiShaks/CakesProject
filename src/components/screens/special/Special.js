@@ -62,5 +62,3 @@ export default function Special () {
     </div>
   );
 };
-
-
