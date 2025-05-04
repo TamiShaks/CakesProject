@@ -34,6 +34,9 @@ export default function Nav ()
                 <Link className="nav-link" to="/Home">{'home 🏠'}</Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to="/Abaut">{'abaut ❤️'}</Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to="/Receipes">{'receipes 🧾'}</Link>
               </li>
               <li className="nav-item">

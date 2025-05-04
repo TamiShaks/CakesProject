@@ -76,7 +76,6 @@ import Home from './components/screens/home/Home';
 import { Provider, useSelector } from 'react-redux';
 import store from './redux/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import BakingOven from './components/screens/bakingOven/BakingOven';
 import Product from './components/screens/home/Product';
 import ReceipessGallery from './components/screens/recepies/ReceipessGallery';
 import Special from './components/screens/special/Special';
@@ -86,6 +85,7 @@ import ShopingCartGallery from './components/screens/bakingOven/ShopingCartGalle
 
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme'; // ודא שזה הנתיב לקובץ theme.js שלך
+import AbautUs from './components/screens/abaut/AbautUs';
 
 function App() {
   return (
@@ -106,7 +106,8 @@ function AppRoutes() {
     <div className="App">
       <Nav />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<AbautUs />} />
+        <Route path="/Abaut" element={<AbautUs />} />
         <Route path="/product" element={<Product />} />
         <Route path="/bigViewe/:id" element={<EnlargedView />} />
         <Route path="/Recepie/:id" element={<Recepie />} />
