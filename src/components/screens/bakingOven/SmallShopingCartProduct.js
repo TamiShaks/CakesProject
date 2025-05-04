@@ -45,7 +45,7 @@ export default function ShopingCartProduct(props) {
         {/* כפתורים בצד ימין */}
         <div className="col-md-3 text-end pe-4">
           <button className="btn btn-outline-danger btn-sm mb-2 w-100" onClick={() => handleRemoveFromCart(props)}>
-            +
+           🗑️ 
           </button>
           <button className="btn btn-outline-warning btn-sm w-100" onClick={() => handleReduceFromCart(props.id)}>
 -         </button>
