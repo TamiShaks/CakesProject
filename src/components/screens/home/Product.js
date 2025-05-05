@@ -1,10 +1,13 @@
 import './Product.css';
 import React from 'react';
 import { Link } from "react-router-dom";
-
+import { useSelector } from 'react-redux';
 export default function Product(props) {
-    const isOutOfStock = props.amount === 0;
 
+    const product = useSelector((state) =>
+        state.cakesList.cakesList.find((product) => product.id === props.id)
+    );
+    const isOutOfStock = product.amount === 0;
     return (
         <div className="card" style={{ position: 'relative', width: '18rem', margin: '10px' }}>
             <Link to={`/bigViewe/${props.id}`}>

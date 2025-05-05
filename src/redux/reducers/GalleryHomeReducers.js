@@ -36,7 +36,6 @@ import { SHOWGALLERY ,INVITECAKE, ADDRETURN, ADDALLRETURN} from '../actionTypes'
 import { addToCart } from '../actions';
 import { useDispatch } from 'react-redux';
 
-
 const InitialCakesList = {
     cakesList: [
      
@@ -48,10 +47,10 @@ const InitialCakesList = {
                 description: "A vibrant two-tier cake with pink drips, fresh berries, buttercream flowers, and golden decorations.",
                 price: 100.00,
                 amount:2
-                ,shake:"circle",
+                ,shape:"circle",
                 color:"pinky"
-                ,Characteristic1:"fruts"
-                ,Characteristic2:"Icicles"
+                ,Characteristic1:"flowers"
+                ,Characteristic2:"icicles"
             },
             {
                 id: 2,
@@ -60,9 +59,11 @@ const InitialCakesList = {
                 description: "Minimalist two-tier cake with soft blush rosettes and golden accents. ",
                 price: 97.00,
                 amount:2
-                ,shake:"circle",
-                color:"whiteRose"
-                ,Characteristic1:"Tiered"
+                ,shape:"circle",
+                color:"white"
+                ,Characteristic1:"wedding"//שכבתי
+                ,Characteristic2:"flowers"//נטיפים
+
             },
             {
                 id: 3,
@@ -71,9 +72,9 @@ const InitialCakesList = {
                 description: "A tall boutique cake in soft blush and chocolate tones, topped with elegant sugar flowers and glossy chocolate drips. ",
                 price: 80.00,
                 amount:3
-                ,shake:"circle",
-                color:"Lightbrown"
-                ,Characteristic1:"elegant"
+                ,shape:"circle",
+                color:"pinky"
+                ,Characteristic1:"flowers"
                 ,Characteristic2:"Icicles"
             },
             {
@@ -83,10 +84,10 @@ const InitialCakesList = {
                 description: " A luscious pink drip cake topped with raspberry goodness and a sweet, delicate glaze. ",
                 price: 43.00,
                 amount:6
-                ,shake:"circle",
+                ,shape:"circle",
                 color:"pinky"
-                ,Characteristic1:"fruts"
-                ,Characteristic2:"Icicles"
+                ,Characteristic1:"pancakes"
+                ,Characteristic2:"icicles"
     
             },
             {
@@ -96,9 +97,11 @@ const InitialCakesList = {
                 description: "Pastel birthday cake with pink swirls, sprinkles & golden message.",
                 price: 39.00,
                 amount:10            
-                ,shake:"circle",
-                color:"pink"
-                ,Characteristic1:"Sprinkle Birthday"
+                ,shape:"circle",
+                color:"white"
+                ,Characteristic1:"birthday"
+                ,Characteristic2:"colorful candies"
+
     
             }
             ,
@@ -110,8 +113,11 @@ const InitialCakesList = {
                 price: 67.00,
                 amount:2
                 ,shape:"circle",
-                color:"colorfull"
-                ,Characteristic1:"Sprinkle Birthday"
+                color:"colorful"
+                ,Characteristic1:"birthday"
+                ,Characteristic2:"colorful candies"
+
+
             },
         {
             id: 7,
@@ -120,9 +126,10 @@ const InitialCakesList = {
             description: " Light vanilla cream cake with rainbow sprinkles." ,
             price: 79.00,
             amount:6           
-            ,shake:"circle",
-            color:"white"
-            ,Characteristic1:"Sprinkle Birthday"
+            ,shape:"circle",
+            color:"colorful"
+            ,Characteristic1:"birthday"
+            ,Characteristic2:"colorful candies"
 
         },
         {
@@ -132,9 +139,11 @@ const InitialCakesList = {
             description: "A minimalist mousse cake with a vibrant mango glaze. ",
             price: 80.00,
             amount:4
-            ,shake:"circle",
-            color:"orange"
-            ,Characteristic:"solid"
+            ,shape:"circle",
+            color:"brown"
+            ,Characteristic1:"solid"
+            ,Characteristic2:"layers"
+
 
         },
         {
@@ -144,9 +153,11 @@ const InitialCakesList = {
             description: "A luxurious white-tiered cake adorned with sugar pearls and delicate roses. "         ,
             price: 47.00,
             amount:1            
-            ,shake:"circle",
+            ,shape:"circle",
             color:"white"
-            ,Characteristic1:"Tiered"
+            ,Characteristic1:"high"
+            ,Characteristic2:"wedding"
+
 
         },
         {
@@ -156,9 +167,11 @@ const InitialCakesList = {
             description: "A delicate French pastry with layers of crisp puff pastry and smooth vanilla cream, dusted with powdered sugar. "           ,
             price: 50.00,
             amount:7           
-            ,shake:"rectangle",
-            color:"white"
-            ,Characteristic1:"layers"
+            ,shape:"rectangle",
+            color:"brown"
+            ,Characteristic1:"solid"
+            ,Characteristic2:"layers"
+
 
         },
         {
@@ -169,8 +182,10 @@ const InitialCakesList = {
             price: 89.00,
             amount:2            
             ,shake:"circle",
-            color:"orange"
-            ,Characteristic1:"fruts"
+            color:"white"
+            ,Characteristic1:"low"
+            ,Characteristic2:"fruits"
+
 
         },
         {
@@ -180,9 +195,10 @@ const InitialCakesList = {
             description: "A festive chocolate cake topped with fresh fruits and glistening jelly.",
             price: 67.00,
             amount:4
-            ,shake:" circle",
-            color:"Light brown"
-            ,Characteristic1:"fruts"
+            ,shape:" circle",
+            color:"brown"
+            ,Characteristic2:"low"
+            ,Characteristic1:"fruits"
         },
         {
             id: 13,
@@ -191,9 +207,11 @@ const InitialCakesList = {
             description: "A classic tiered cake with smooth vanilla frosting and delicate floral accents in soft dusty pink. " ,
             price: 97.00,
             amount:2
-            ,shake:"circle",
-            color:"cream" 
-            ,Characteristic1:"Tiered"
+            ,shape:"circle",
+            color:"white" 
+            ,Characteristic1:"wedding"
+            ,Characteristic2:"flowers"
+
 
         },
         {
@@ -203,9 +221,11 @@ const InitialCakesList = {
             description: " A chic, minimalistic birthday cake adorned with elegant black bows and delicate white frosting. ",
             price: 50.00,
             amount:6
-            ,shake:"circle",
-            color:"black"
-            ,Characteristic:"Fabric ribbons"
+            ,shape:"circle",
+            color:"white"
+            ,Characteristic1:"fabric ribbons"
+            ,Characteristic2:"solid"
+
         },
         {
             id: 15,
@@ -214,9 +234,11 @@ const InitialCakesList = {
             description: "A fun two-tier birthday cake decorated with school-themed fondant accents. ",
             price: 78.00,
             amount:6
-            ,shake:"circle",
+            ,shape:"circle",
             color:"colorful"
-            ,Characteristic1:"Sprinkle Birthday"
+            ,Characteristic1:"birthday"
+            ,Characteristic1:"school"
+
         },
         {
             id: 16,
@@ -225,9 +247,11 @@ const InitialCakesList = {
             description: "A dramatic black-and-white cake adorned with black roses and dripping ganache",
             price: 113.00,
             amount:2
-            ,shake:"circle",
-            color:"black"
-            ,Characteristic1:"Tiered"
+            ,shape:"circle",
+            color:"gloomy"
+            ,Characteristic1:"icicles"
+            ,Characteristic2:"lace"
+
         },
         {
             id: 17,
@@ -236,9 +260,11 @@ const InitialCakesList = {
             description: "A sophisticated silver glitter cake with a shimmering finish, ideal for an elegant celebration.",
             price: 67.00,
             amount:3
-            ,shake:"circle",
-            color:"gray"
+            ,shape:"circle",
+            color:"gloomy"
             ,Characteristic1:"romantic"
+            ,Characteristic2:"diamonds"
+
         },
         {
             id: 18,
@@ -247,9 +273,11 @@ const InitialCakesList = {
             description: "A stunning blue cake with silver sugar pearls, creating a festive and elegant vibe. ",
             price: 59.00,
             amount:4
-            ,shake:"circle",
+            ,shape:"circle",
             color:"blue"
             ,Characteristic1:"romantic"
+            ,Characteristic2:"diamonds"
+
         },
         {
             id:19,
@@ -261,6 +289,8 @@ const InitialCakesList = {
             ,shape:"heart",
             color:"white"
             ,Characteristic1:"flawers"
+            ,Characteristic2:"solid"
+
         },
         {
             id: 20,
@@ -269,9 +299,11 @@ const InitialCakesList = {
             description: "A refined cake with a satin-like ribbon design and elegant candles.",
             price: 72.00,
             amount:3
-            ,shake:"circle",
+            ,shape:"circle",
             color:"white"
             ,Characteristic1:"ribbons"
+            ,Characteristic2:"solid"
+
         },
         {
             id:21,
@@ -280,9 +312,11 @@ const InitialCakesList = {
             description: "A charming birthday cake adorned with white ribbon details and soft piped icing.",
             price: 51.00,
             amount:5
-            ,shake:"circle",
+            ,shape:"circle",
             color:"white"
-            ,Characteristic:"Fabric ribbons"
+            ,Characteristic1:"fabric ribbons"
+            ,Characteristic2:"solid"
+
         },
         {
             id: 22,
@@ -294,6 +328,8 @@ const InitialCakesList = {
             ,shape:"circle",
             color:"red"
             ,Characteristic1:"layers"
+            ,Characteristic2:"pancakes"
+
         },
         {
             id: 23,
@@ -302,9 +338,11 @@ const InitialCakesList = {
             description: "A minimalistic cake with a bold 'It's My Birthday!' message, perfect for a fun and modern birthday celebration.",
             price: 64.00,
             amount:7
-            ,shake:"circle",
+            ,shape:"circle",
             color:"pink"
-            ,Characteristic1:"modernbirthday"
+            ,Characteristic1:"birthday"
+            ,Characteristic2:"smears"
+
         },
         {
             id: 24,
@@ -313,9 +351,11 @@ const InitialCakesList = {
             description: "Dark chocolate cake with berries & pomegranate.",
             price: 67.00,
             amount:5          
-            ,shake:"circle",
-            color:"Light brown"
-            ,Characteristic1:"fruts"
+            ,shape:"circle",
+            color:"brown"
+            ,Characteristic1:"fruits"
+            ,Characteristic2:"low"
+
         }
         ,
         {
@@ -325,9 +365,11 @@ const InitialCakesList = {
             description: "A nature-inspired cake topped with edible mushrooms and earthy accents.",
             price: 54.00,
             amount:4
-            ,shake:"circle",
+            ,shape:"circle",
             color:"brown"
-            ,Characteristic1:"vegetable"
+            ,Characteristic1:"vegatables"
+            ,Characteristic2:"low"
+
         },
         {
             id: 26,
@@ -336,9 +378,11 @@ const InitialCakesList = {
             description: "A decadent mocha cake with silky hazelnut cream swirls, crunchy caramelized nuts, and a rich chocolate ganache drip. Elegance and flavor in every bite.",
             price:85.00,
             amount:2
-            ,shake:"circle",
-            color:"moka"
-            ,Characteristic1:"nuts"
+            ,shape:"circle",
+            color:"brown"
+            ,Characteristic1:"icicles"
+            ,Characteristic2:"kisses"
+
 
         },
         {
@@ -348,9 +392,10 @@ const InitialCakesList = {
             description: "Elegant two-tier white cake adorned with handcrafted white flowers and golden leaves.",
             price:89,
             amount:2
-            ,shake:"circle",
+            ,shape:"circle",
             color:"white"
-            ,Characteristic1:"Tiered"
+            ,Characteristic1:"flowers"
+            ,Characteristic2:"wedding"
         },
         {
             id: 28,
@@ -359,9 +404,10 @@ const InitialCakesList = {
             description: "A charming cake decorated with soft pink buttercream, small black heart sprinkles, and delicate ribbon details. ",
             price: 58.00,
             amount:4 
-            ,shake:"circle",
+            ,shape:"circle",
             color:"pink"
-            ,Characteristic1:"Fabric ribbons"
+            ,Characteristic1:"fabric ribbons"
+            ,Characteristic2:"solid"
 
         },
         {
@@ -371,9 +417,10 @@ const InitialCakesList = {
             description: "A beautiful pastel pink cake adorned with fresh flowers and a shiny '16'",
             price: 76.00,
             amount:4
-            ,shake:"circle",
+            ,shape:"circle",
             color:"pink"
             ,Characteristic:"flawers"
+            ,Characteristic:"birthday"
         },
         {
             id: 30,
@@ -382,9 +429,10 @@ const InitialCakesList = {
             description: "A fun, colorful cake topped with chocolate balls and colorful sprinkles",
             price: 48.00,
             amount:2
-            ,shake:"circle",
+            ,shape:"circle",
             color:"brown"   
-            ,Characteristic1:"Sprinkle Birthday"
+            ,Characteristic1:"birthday"
+            ,Characteristic2:"colorful candies"
         },
         {
             id: 31,
@@ -395,7 +443,8 @@ const InitialCakesList = {
             amount:2
             ,shape:"circle",
             color:"white"
-            ,Characteristic1:"fruts"
+            ,Characteristic1:"fruits"
+            ,Characteristic2:"low"
         },
         {
             id: 32,
@@ -404,9 +453,10 @@ const InitialCakesList = {
             description: "Light cheesecake with mixed berries and physalis" ,
             price: 89.00,
             amount:4
-            ,shake:"circle",
+            ,shape:"circle",
             color:"white"
-            ,Characteristic1:"cheesecake"
+            ,Characteristic1:"fruits"
+            ,Characteristic2:"low"
 
         },
         {
@@ -416,9 +466,10 @@ const InitialCakesList = {
             description: "A delightful pink cake with elegant ruffles",
             price: 75.00,
             amount:4
-            ,shake:"circle",
+            ,shape:"circle",
             color:"pink"
-            ,Characteristic1:"modernbirthday"
+            ,Characteristic1:"birthday"
+            ,Characteristic2:"solid"
         },
     ]
 };
@@ -498,6 +549,16 @@ console.log("tttttthe action is:",action.type)
         ...state,
         cakesList: updatedCakesList, // Return the new cakesList
     };
+
+    // case UPDATE_PRODUCT_AMOUNT:
+    //         return {
+    //             ...state,
+    //             products: state.products.map((product) =>
+    //                 product.id === action.payload.id
+    //                     ? { ...product, amount: action.payload.newAmount }
+    //                     : product
+    //             ),
+    //         };
         default:
             return state;        
     }
