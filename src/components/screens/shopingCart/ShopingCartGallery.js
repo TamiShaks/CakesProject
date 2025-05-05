@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import ShopingCartProduct from './ShopingCartProduct';
 import './ShopingCartGallery.css'; // Ensure you have a CSS file for styles
 import { Link } from 'react-router-dom';
-
+import CakeImage from '../special/CakeImage';
 export default function ShopingCartGallery() {
     const invitedCakeList = useSelector((state) => state.invitedCakeList.invitedCakeList);
     const [toPay, setToPay] = useState(0);
