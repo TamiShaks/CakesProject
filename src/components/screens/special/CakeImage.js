@@ -121,5 +121,5 @@ export const CakeImage = ({ imageId }) => { // ייצוא של CakeImage
     return <p>❌ תמונה לא נמצאה</p>;
   }
 
-  return <img src={src} alt={`עוגה ${imageId}`} style={{ maxWidth: '300px' }} />;
+  return <img src={src} alt={`עוגה ${imageId}`} style={{ maxWidth: '800px' }} />;
 };
