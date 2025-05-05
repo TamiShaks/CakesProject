@@ -39,9 +39,7 @@ export default function Nav ()
               <li className="nav-item">
                 <Link className="nav-link" to="/Receipes">{'receipes 🧾'}</Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/Payment">{'payment 🤑'}</Link>
-              </li>
+              
               <li className="nav-item">
                 <Link className="nav-link" to="/Special">{'special 🎂'}</Link>
               </li>

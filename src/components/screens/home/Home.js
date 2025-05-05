@@ -16,7 +16,7 @@ export default function Home() {
     };
 
     const sortingByName = () => {
-        const newCakeList = [...cakeList].sort((p1, p2) =>
+        const newCakeList = [...cakeList].sort((p1, p2) =>ז
             p1.name.trim().localeCompare(p2.name.trim())
         );
         setSortedCakeList(newCakeList);

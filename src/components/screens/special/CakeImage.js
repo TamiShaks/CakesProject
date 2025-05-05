@@ -1,4 +1,4 @@
-// CakeImage.js
+
 import React from 'react';
 
 // צור אובייקט של כל התמונות שהן ייבוא ידני
@@ -112,8 +112,9 @@ const imageMap = {
   '3125': cake3125,
   // הוסף את כל שאר התמונות עם המפתחות המתאימים
 };
+export default imageMap; // ייצוא של imageMap
 
-const CakeImage = ({ imageId }) => {
+export const CakeImage = ({ imageId }) => { // ייצוא של CakeImage
   const src = imageMap[imageId];
 
   if (!src) {
@@ -122,5 +123,3 @@ const CakeImage = ({ imageId }) => {
 
   return <img src={src} alt={`עוגה ${imageId}`} style={{ maxWidth: '300px' }} />;
 };
-
-export default CakeImage;
