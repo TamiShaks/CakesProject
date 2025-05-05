@@ -1,27 +1,35 @@
 import React, { useState, useMemo } from 'react';
-import CakeImage from '../special/CakeImage';
-import loading from '../../../assets/images/loading.gif'; 
-import './Special.css'; // Importing the CSS file
+import { CakeImage } from '../special/CakeImage';
+import loading from '../../../assets/images/loading.gif';
+import './Special.css';
+import { addToCart, inviteCake } from '../../../redux/actions';
+import { useDispatch } from 'react-redux';
+import imageMap from './CakeImage';
 
 export default function Special() {
   const [shape, setShape] = useState('');
-  const [layers, setLayers] = useState('1'); // Default to 1
+  const [layers, setLayers] = useState('1');
   const [flavor, setFlavor] = useState('');
   const [decoration, setDecoration] = useState('');
-  const [showImageOnly, setShowImageOnly] = useState(false); // Image display mode
-  const [isLoading, setIsLoading] = useState(false); // Loading state
+  const [showImageOnly, setShowImageOnly] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const dispatch = useDispatch();
 
   const imageId = useMemo(() => {
     const computedLayers = shape === '1' ? layers : '1';
     return shape + computedLayers + flavor + decoration;
   }, [shape, layers, flavor, decoration]);
 
+  const handleInviteCake = (myCake) => {
+    dispatch(addToCart({ myCake }));
+  };
+
   const handleShowImage = () => {
-    setIsLoading(true); // Activate loading state
+    setIsLoading(true);
     setTimeout(() => {
-      setIsLoading(false); // End loading state
-      setShowImageOnly(true); // Switch to image display only
-    }, 3000); // 3 seconds delay
+      setIsLoading(false);
+      setShowImageOnly(true);
+    }, 3000);
   };
 
   const handleReset = () => {
@@ -29,13 +37,14 @@ export default function Special() {
     setLayers('1');
     setFlavor('');
     setDecoration('');
-    setShowImageOnly(false); // Return to selection
-    setIsLoading(false); // Reset loading state
+    setShowImageOnly(false);
+    setIsLoading(false);
   };
 
   return (
-    <div className="container py-5">
+    <div className={`container d-flex flex-column py-5 ${showImageOnly || isLoading ? 'no-background' : ''}`} style={{ direction: 'rtl' }}>
       <h2 className="text-center mb-4">בחרי עוגה מיוחדת:</h2>
+
       {!showImageOnly && !isLoading ? (
         <>
           {/* Shape selection */}
@@ -123,14 +132,27 @@ export default function Special() {
           </div>
         </>
       ) : isLoading ? (
-        <div className="text-center">
+        <div className="fullscreen">
           <img src={loading} alt="Loading..." />
         </div>
       ) : (
-        <div className="text-center">
-          <CakeImage imageId={imageId} />
-          <button className="btn btn-secondary mt-4" onClick={handleReset}>
-            חזרה לבחירה
+        <div className="fullscreen flex-column">
+          <img src={imageMap[imageId]} alt="Cake" className="full-image" />
+
+          <button
+            className="btn btn-primary mt-3"
+            onClick={() =>
+              handleInviteCake({
+                id: imageId,
+                name: 'special cake',
+                image: imageMap[imageId],
+                description: 'This is a special cake',
+                price: 250.0,
+                amount: 1,
+              })
+            }
+          >
+            Invite
           </button>
         </div>
       )}

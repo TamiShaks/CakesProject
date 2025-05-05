@@ -1,4 +1,4 @@
-// CakeImage.js
+
 import React from 'react';
 
 // צור אובייקט של כל התמונות שהן ייבוא ידני
