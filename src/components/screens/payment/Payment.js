@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 import './Payment.css'; // ודא שקובץ ה-CSS קיים ומעוצב
 import {
   MDBBtn,
@@ -17,9 +18,10 @@ export default function Payment() {
     expirationDate: "",
     cvv: "",
   });
-
+  
   const [isProcessing, setIsProcessing] = useState(false); // מצב עיבוד
   const [activeField, setActiveField] = useState(""); // השדה הפעיל כרגע
+  const { total } = useParams();
 
   // פונקציה לעדכון ה-state כאשר המשתמש מזין פרטים
   const handleInputChange = (e) => {
@@ -52,11 +54,16 @@ export default function Payment() {
         Card Number: ${cardNumber}
         Expiration Date: ${expirationDate}
         CVV: ${cvv}
+        total: ${total} $
       `);
     }, 3000); // השהייה של 3 שניות
   };
 
   return (
+    <div className="payment-header">
+      <h1 className="payment-title">💳 פרטי תשלום</h1>
+      <h2 className="payment-subtitle">סה״כ לתשלום: {total} $</h2>
+
     <MDBContainer fluid className="py-5 gradient-custom">
       <MDBRow className="d-flex justify-content-center py-5">
         <MDBCol md="7" lg="5" xl="4">
@@ -165,5 +172,6 @@ export default function Payment() {
         </MDBCol>
       </MDBRow>
     </MDBContainer>
+    </div>
   );
 }

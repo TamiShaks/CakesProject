@@ -70,7 +70,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Product from './Product';
-import SmallShopingCartProduct from '../bakingOven/SmallShopingCartProduct';
+import SmallShopingCartProduct from '../shopingCart/SmallShopingCartProduct';
 import './home.css';
 
 export default function Home() {

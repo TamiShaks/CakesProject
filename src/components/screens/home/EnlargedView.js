@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { Typography, Button, Container, Box, Grid } from '@mui/material';
 import { addToCart, inviteCake } from '../../../redux/actions';
-
+import { updateProductAmount } from '../../../redux/actions';
 export const EnlargedView = () => {
   const dispatch = useDispatch();
   const { id } = useParams();

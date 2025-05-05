@@ -36,7 +36,6 @@ import { SHOWGALLERY ,INVITECAKE, ADDRETURN, ADDALLRETURN} from '../actionTypes'
 import { addToCart } from '../actions';
 import { useDispatch } from 'react-redux';
 
-
 const InitialCakesList = {
     cakesList: [
      
@@ -550,6 +549,16 @@ console.log("tttttthe action is:",action.type)
         ...state,
         cakesList: updatedCakesList, // Return the new cakesList
     };
+
+    // case UPDATE_PRODUCT_AMOUNT:
+    //         return {
+    //             ...state,
+    //             products: state.products.map((product) =>
+    //                 product.id === action.payload.id
+    //                     ? { ...product, amount: action.payload.newAmount }
+    //                     : product
+    //             ),
+    //         };
         default:
             return state;        
     }

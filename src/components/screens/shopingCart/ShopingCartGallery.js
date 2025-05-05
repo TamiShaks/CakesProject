@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import ShopingCartProduct from './ShopingCartProduct';
 import './ShopingCartGallery.css'; // Ensure you have a CSS file for styles
+import { Link } from 'react-router-dom';
 
 export default function ShopingCartGallery() {
     const invitedCakeList = useSelector((state) => state.invitedCakeList.invitedCakeList);
@@ -33,6 +34,11 @@ export default function ShopingCartGallery() {
                     אין מוצרים בעגלה 🍰
                 </div>
             )}
+            {toPay>0&&(<div>
+                <Link to={`/Payment/${toPay}`} className="btn btn-primary mt-3">
+                <p>למעבר לתשלום</p>
+                </Link>
+            </div>)}
         </div>
     );
 }
