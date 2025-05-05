@@ -15,6 +15,7 @@ import img16 from '../../../assets/homePage/16.jpg'
 import img17 from '../../../assets/homePage/17.jpg'
 import img18 from '../../../assets/homePage/18.jpg'
 import img19 from '../../../assets/homePage/19.jpg'
+import video from '../../../assets/homePage/video.mp4'
 import { Link } from 'react-router-dom'
 
 export default function AbautUs() {
@@ -150,7 +151,7 @@ export default function AbautUs() {
         <div className="mb-5 p-4 border rounded bg-white shadow-sm">
           <h4 className="mb-3">🎥 הצצה למטבח</h4>
           <video controls className="w-50" style={{ maxHeight: '300px', margin: '0 auto', display: 'block' }}>
-            <source src={require('../../../assets/video/your-video.mp4')} type="video/mp4" />
+            <source src={video} type="video/mp4" />
           </video>
           <Link to={`/Receipes`} className="d-block text-center btn btn-dark text-white mt-3">
             👉 למתכונים המובחרים שלנו
