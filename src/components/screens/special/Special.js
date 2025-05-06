@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
 import { CakeImage } from '../special/CakeImage';
 import loading from '../../../assets/images/loading.gif';
+import {  Button } from '@mui/material';
 import './Special.css';
 import { addToCart, inviteCake } from '../../../redux/actions';
 import { useDispatch } from 'react-redux';
@@ -41,6 +42,32 @@ export default function Special() {
     setIsLoading(false);
   };
 
+  const shapeDescriptions = {
+    '1': 'עוגה עגולה',
+    '2': 'עוגה מרובעת',
+    '3': 'עוגה בצורת לב',
+  };
+  
+  const flavorDescriptions = {
+    '1': 'שוקולד',
+    '2': 'וניל',
+
+  };
+  
+  const decorationDescriptions = {
+    '1': 'קישוטי שוקולד',
+    '2': 'קישוטי סוכריות',
+    '3': 'קישוטי תותים',
+    '4': 'קישוטי סוכריות צבעוניות',
+    '5': 'קישוטי פרחים יפיפיים',
+  };
+  const getDescription = () => {
+    const shapeText = shapeDescriptions[shape] || 'צורה לא נבחרה';
+    const flavorText = flavorDescriptions[flavor] || 'טעם לא נבחר';
+    const decorationText = decorationDescriptions[decoration] || 'קישוט לא נבחר';
+  
+    return ` ${shapeText} עם ${flavorText} ו-${decorationText}`;
+  };
   return (
     <div className={`container d-flex flex-column py-5 ${showImageOnly || isLoading ? 'no-background' : ''}`} style={{ direction: 'rtl' }}>
       <h2 className="text-center mb-4">בחרי עוגה מיוחדת:</h2>
@@ -139,21 +166,29 @@ export default function Special() {
         <div className="fullscreen flex-column">
           <img src={imageMap[imageId]} alt="Cake" className="full-image" />
 
-          <button
-            className="btn btn-primary mt-3"
+          <Button
+              variant="contained"
+              color="primary"
+              sx={{
+                mt: 2,
+                px: 4,
+                py: 1,
+                fontWeight: 'bold',
+                borderRadius: 2,
+              }}
             onClick={() =>
               handleInviteCake({
-                id: imageId,
+                id: parseInt(imageId, 10),
                 name: 'special cake',
                 image: imageMap[imageId],
-                description: 'This is a special cake',
+                description: getDescription(),
                 price: 250.0,
                 amount: 1,
               })
             }
           >
             Invite
-          </button>
+          </Button>
         </div>
       )}
     </div>

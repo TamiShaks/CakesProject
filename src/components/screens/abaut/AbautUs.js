@@ -15,6 +15,8 @@ import img16 from '../../../assets/homePage/16.jpg'
 import img17 from '../../../assets/homePage/17.jpg'
 import img18 from '../../../assets/homePage/18.jpg'
 import img19 from '../../../assets/homePage/19.jpg'
+import img20 from '../../../assets/images/SpecialCake/1213.jpg'
+import img21 from '../../../assets/images/SpecialCake/1313.jpg'
 import video from '../../../assets/homePage/video.mp4'
 import { Link } from 'react-router-dom'
 
@@ -34,7 +36,7 @@ export default function AbautUs() {
         setCounter(prev => (prev + 1) % CakeList.length);
         setFade(true);
       }, 500);
-    }, 3000);
+    }, 2000);
 
     return () => clearInterval(interval);
   }, []);
@@ -49,12 +51,20 @@ export default function AbautUs() {
     opacity: fade ? 1 : 0
   };
 
-  const backgroundSectionStyle = {
+  const backgroundSectionStyle1 = {
     backgroundImage: `url(${img2})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     position: 'relative',
     zIndex: 1
+  };
+  const backgroundSectionStyle2 = {
+    backgroundImage: `url(${img21})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    position: 'relative',
+    zIndex: 1,
+    
   };
 
   const backgroundOverlay = {
@@ -88,10 +98,10 @@ export default function AbautUs() {
       </div>
 
       {/* ברוכים הבאים עם רקע */}
-      <div className="mb-5 p-4 border rounded bg-light shadow-sm" style={backgroundSectionStyle}>
+      <div className="mb-5 p-4 border rounded bg-light shadow-sm" style={backgroundSectionStyle1}>
         <div style={backgroundOverlay} />
         <div style={contentBoxStyle}>
-          <h4 className="mb-3">🎂 ברוכים הבאים ל־useCake</h4>
+          <h4 className="mb-3">ברוכים הבאים ל־useCake</h4>
           <p>ב־useCake אנחנו לא רק אופים – אנחנו יוצרים חוויה של עונג, יופי וטעם בלתי נשכח.</p>
           <ul>
             <li>כל עוגה נבנית בקפידה, בעבודת יד, עם שילובי טעמים מדויקים ועיצוב עוצר נשימה.</li>
@@ -104,7 +114,7 @@ export default function AbautUs() {
 
       {/* גלריית תמונות עם רקע */}
       <div className="mb-5 p-4 rounded shadow-sm bg-light">
-        <h4 className="mb-3">🍰 טעימה מהקולקציה</h4>
+        <h4 className="mb-3"> טעימה מהקולקציה</h4>
         <div className="d-flex justify-content-center flex-wrap">
           {[img1, img2, img3, img4, img5].map((img, index) => (
             <div key={index} className="position-relative">
@@ -135,16 +145,20 @@ export default function AbautUs() {
       </div>
 
       {/* מתכונים ללא רקע */}
-      <div className="mb-5 p-4 rounded shadow-sm bg-light">
-        <h4 className="mb-3">📖 המתכונים של useCake</h4>
+      <div className="mb-5 p-4 rounded shadow-sm bg-light" style={backgroundSectionStyle2} >
+      <div style={backgroundOverlay} />
+        <div style={contentBoxStyle}>
+        <h4 className="mb-3"> המתכונים של useCake</h4>
         <p>רוצים להכין עוגות שמקבלות תשואות גם בבית?</p>
         <p>
           במתחם המתכונים של useCake תמצאו מבחר איכותי ונבחר של מתכונים שמביאים את הקסם של הקונדיטוריה המקצועית – היישר לתנור הביתי שלכם.
         </p>
-        <p>✨ לכל מתכון תוכלו להעניק ציון באימוג'י – סמיילי מתלהב, לבבות או עיניים נוצצות – בהתאם לכמה שהתלהבתם ממנו בפועל.</p>
-        <p>🧁 בנוסף, כל מתכון זמין להורדה מיידית כקובץ PDF – כדי שתוכלו לשמור, להדפיס ולשבץ בקלאסר המשפחתי.</p>
+        <p> לכל מתכון תוכלו להעניק ציון באימוג'י – סמיילי מתלהב, לבבות או עיניים נוצצות – בהתאם לכמה שהתלהבתם ממנו בפועל.</p>
+        <p> בנוסף, כל מתכון זמין להורדה מיידית כקובץ PDF – כדי שתוכלו לשמור, להדפיס ולשבץ בקלאסר המשפחתי.</p>
         <p className="fw-bold">useCake – כי גם בבית, כל עוגה יכולה להיות יצירת בוטיק.</p>
       </div>
+      </div>
+      
 
       <div>
         {/* סרטון */}
@@ -183,13 +197,13 @@ export default function AbautUs() {
           zIndex: 2,
           position: 'relative'
         }}>
-          <h4 className="mb-3">🎨 תעצבו את העוגה – אנחנו נאפה את החלום</h4>
+          <h4 className="mb-3"> תעצבו את העוגה – אנחנו נאפה את החלום</h4>
           <p>הכירו את הפיצ'ר שהופך כל אחד למעצב עוגות מקצועי – יוצרים עוגה אונליין, בלחיצות.</p>
           <ul>
-            <li>🍰 תבחרו את הצורה</li>
-            <li>🎂 תקבעו כמה קומות</li>
-            <li>🍫 תבחרו את הטעם</li>
-            <li>🍓 תוסיפו את הקישוט שמעל</li>
+            <li> תבחרו את הצורה</li>
+            <li> תקבעו כמה קומות</li>
+            <li> תבחרו את הטעם</li>
+            <li> תוסיפו את הקישוט שמעל</li>
           </ul>
           <p>ולא תאמינו – תוך 3 שניות תקבלו הדמיה חיה של העוגה שיצרתם. ככה רואים אותה לפני שהיא נכנסת לאפייה.</p>
           <p className="fw-bold">כי כל עוגה מספרת סיפור – וזה הסיפור שלכם.</p>

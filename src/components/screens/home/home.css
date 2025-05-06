@@ -42,3 +42,10 @@
     color: #999; /* Light gray color for the message */
     margin-top: 20px; /* Space from the top */
 }
+.product-col {
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-bottom: 10px; /* אם רוצים גם רווח אנכי קטן */
+  }
+
+  

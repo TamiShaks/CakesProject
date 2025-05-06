@@ -21,7 +21,8 @@
   /* תמונת עוגה */
   .cake-image {
     width: 100%;
-    height: 330px;
+    
+    height: 400px;
     object-fit: cover;
     border-bottom: 1px solid #eee;
   }
@@ -50,4 +51,11 @@
   .card-text strong {
     color: #d35400;
   }
-  
+  .product-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+  }

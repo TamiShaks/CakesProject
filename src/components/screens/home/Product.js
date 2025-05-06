@@ -9,7 +9,8 @@ export default function Product(props) {
     );
     const isOutOfStock = product.amount === 0;
     return (
-        <div className="card" style={{ position: 'relative', width: '18rem', margin: '10px' }}>
+        <div className="card" style={{ position: 'relative'}}>
+            {/* , width: '18rem', margin: '10px'  */}
             <Link to={`/bigViewe/${props.id}`}>
                 <img 
                     src={props.image} 

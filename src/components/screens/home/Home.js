@@ -56,7 +56,7 @@ export default function Home() {
                     </div>
 
                     {/* Product Cards */}
-                    <div className="row">
+                    <div className="row row-cols-1 row-cols-md-3 g-5 align-items-stretch">
                         {sortedCakeList.map(cake => (
                             <div className="col-md-4" key={cake.id}>
                                 <Product {...cake} />
