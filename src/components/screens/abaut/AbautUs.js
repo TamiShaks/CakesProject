@@ -42,8 +42,7 @@ export default function AbautUs() {
   }, []);
 
   const imageStyle = {
-    width: '100%',
-    maxWidth: '800px',
+    width: '800px',
     height: '500px',
     objectFit: 'cover',
     boxShadow: '0 8px 20px rgba(0,0,0,0.25)',
@@ -163,7 +162,7 @@ export default function AbautUs() {
       <div>
         {/* סרטון */}
         <div className="mb-5 p-4 border rounded bg-white shadow-sm">
-          <h4 className="mb-3">🎥 הצצה למטבח</h4>
+          <h4 className="mb-3">🎥 ראו הסבר קצר - היישר לתוך המחשב שלך</h4>
           <video controls className="w-50" style={{ maxHeight: '300px', margin: '0 auto', display: 'block' }}>
             <source src={video} type="video/mp4" />
           </video>

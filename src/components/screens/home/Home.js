@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import Product from './Product';
 import SmallShopingCartProduct from '../shopingCart/SmallShopingCartProduct';
 import './home.css';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
     const cakeList = useSelector((state) => state.cakesList.cakesList);
@@ -36,6 +37,11 @@ export default function Home() {
                         {invitedCakeList.map(cake => (
                             <SmallShopingCartProduct key={cake.id} {...cake} className="small-cart-product" />
                         ))}
+                        <div>
+                <Link to={`/BakingOven`} className="btn btn-primary mt-3">
+                <p>למעבר לעגלת הקניות </p>
+                </Link>
+            </div>
                     </div>
                 )}
                 <div className={invitedCakeList.length > 0 ? "col-md-9 main-content" : "col-md-12 main-content"}>

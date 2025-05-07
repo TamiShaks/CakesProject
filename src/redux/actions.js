@@ -35,6 +35,7 @@ export const addAllReturn=(product)=>({
     type: ADDALLRETURN,
     payload:product,
 });
+
 // export const updateProductAmount=(id, newAmount)=>({
 //     type: UPDATE_PRODUCT_AMOUNT,
 //     payload: { id, newAmount },
