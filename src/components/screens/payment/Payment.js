@@ -61,10 +61,11 @@ export default function Payment() {
 
   return (
     <div className="payment-header">
-      <h1 className="payment-title">💳 פרטי תשלום</h1>
+     
+    <MDBContainer fluid className="py-5 gradient-custom"> 
+    <h1 className="payment-title">💳 פרטי תשלום</h1>
       <h2 className="payment-subtitle">סה״כ לתשלום: {total} $</h2>
 
-    <MDBContainer fluid className="py-5 gradient-custom">
       <MDBRow className="d-flex justify-content-center py-5">
         <MDBCol md="7" lg="5" xl="4">
           <MDBCard style={{ borderRadius: "15px" }}>

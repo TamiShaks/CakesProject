@@ -1,4 +1,4 @@
-
+import { useEffect } from 'react';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import Product from './Product';
@@ -10,7 +10,9 @@ export default function Home() {
     const cakeList = useSelector((state) => state.cakesList.cakesList);
     const invitedCakeList = useSelector((state) => state.invitedCakeList.invitedCakeList);
     const [sortedCakeList, setSortedCakeList] = useState(cakeList);
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
     const sortingByPrice = () => {
         const newCakeList = [...cakeList].sort((a, b) => a.price - b.price);
         setSortedCakeList(newCakeList);

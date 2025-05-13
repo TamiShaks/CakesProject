@@ -4,13 +4,20 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { Typography, Button, Container, Box, Grid } from '@mui/material';
 import { addToCart, inviteCake } from '../../../redux/actions';
-
+import { useEffect } from 'react';
 export const EnlargedView = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const cakeList = useSelector((state) => state.cakesList.cakesList);
   const myCake = cakeList.find(cake => cake.id === parseInt(id));
-
+  
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [id]);
+  
+  // useEffect(() => {
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // }, []);
   const handleInviteCake = () => {
     dispatch(inviteCake(myCake.id));
     if (myCake.amount > 0) {

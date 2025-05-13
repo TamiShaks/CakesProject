@@ -1,5 +1,16 @@
-.full-width-product {
+/* .full-width-product {
     width: 100%; /* Ensure each product takes the full width */
-    margin-bottom: 10px; /* Space between products */
-    box-sizing: border-box; /* Allows padding/border to be included in total width */
+    /* margin-bottom: 10px; /* Space between products */
+    /* box-sizing: border-box; /* Allows padding/border to be included in total width */
+/* } */ 
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.product-grid > * {
+  flex: 1 1 300px;
+  max-width: 400px;
 }

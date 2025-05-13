@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './ReceipessGallery.css';
 import RadioGroupRating from './RadioGroupRating';
@@ -8,7 +9,9 @@ export default function ReceipessGallery() {
   const myRecepiesCakesList = useSelector(
     (state) => state.myRecepiesCakesList.myRecepiesCakesList
   ) || [];
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, []);
   const renderSection = (type, title) => {
     const filtered = myRecepiesCakesList.filter(cake => cake.typeEvent === type);
 
