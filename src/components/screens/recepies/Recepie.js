@@ -5,7 +5,7 @@ import React from 'react';
 export default function Recepie() {
   const { id } = useParams();
   const recipe = RecepiesList.find(cake => cake.id === Number(id));
-  
+
   function downloadPDF() {
     const doc = new jsPDF();
 
@@ -68,19 +68,19 @@ export default function Recepie() {
       </h1>
 
       <img
-  src={recipe.image}
-  alt={recipe.name}
-  style={{
-    width: '100%',
-    maxWidth: '500px',        // מגביל את הרוחב בפועל
-    height: 'auto',
-    display: 'block',
-    margin: '0 auto 25px',    // מרכז את התמונה ומוסיף רווח תחתון
-    objectFit: 'cover',
-    borderRadius: '12px',
-    border: '3px solid #ffd1c1',
-  }}
-/>
+        src={recipe.image}
+        alt={recipe.name}
+        style={{
+          width: '100%',
+          maxWidth: '500px',        // מגביל את הרוחב בפועל
+          height: 'auto',
+          display: 'block',
+          margin: '0 auto 25px',    // מרכז את התמונה ומוסיף רווח תחתון
+          objectFit: 'cover',
+          borderRadius: '12px',
+          border: '3px solid #ffd1c1',
+        }}
+      />
 
       <pre
         style={{
@@ -97,33 +97,33 @@ export default function Recepie() {
         {recipe.theRecepie}
       </pre>
       <button
-  onClick={downloadPDF}
-  style={{
-    backgroundColor: '#ff6f61', // צבע רקע
-    color: '#fff', // צבע טקסט
-    border: 'none', // ללא גבול
-    borderRadius: '8px', // פינות מעוגלות
-    padding: '10px 20px', // ריווח פנימי
-    fontSize: '1rem', // גודל טקסט
-    fontFamily: "'Varela Round', sans-serif", // גופן תואם
-    cursor: 'pointer', // סמן עכבר מותאם
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // צל
-    transition: 'background-color 0.3s ease', // אפקט מעבר
-  }}
-  onMouseOver={(e) => (e.target.style.backgroundColor = '#e65a50')} // צבע רקע בריחוף
-  onMouseOut={(e) => (e.target.style.backgroundColor = '#ff6f61')} // חזרה לצבע המקורי
->
-  Download PDF
-  </button>
-<div
-  style={{
-    textAlign: 'center',
-    marginTop: '20px',
-    fontSize: '1.2rem',
-    color: '#5b3a2f',
-  }}
-></div>
+        onClick={downloadPDF}
+        style={{
+          backgroundColor: '#ff6f61', // צבע רקע
+          color: '#fff', // צבע טקסט
+          border: 'none', // ללא גבול
+          borderRadius: '8px', // פינות מעוגלות
+          padding: '10px 20px', // ריווח פנימי
+          fontSize: '1rem', // גודל טקסט
+          fontFamily: "'Varela Round', sans-serif", // גופן תואם
+          cursor: 'pointer', // סמן עכבר מותאם
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // צל
+          transition: 'background-color 0.3s ease', // אפקט מעבר
+        }}
+        onMouseOver={(e) => (e.target.style.backgroundColor = '#e65a50')} // צבע רקע בריחוף
+        onMouseOut={(e) => (e.target.style.backgroundColor = '#ff6f61')} // חזרה לצבע המקורי
+      >
+        Download PDF
+      </button>
+      <div
+        style={{
+          textAlign: 'center',
+          marginTop: '20px',
+          fontSize: '1.2rem',
+          color: '#5b3a2f',
+        }}
+      ></div>
     </div>
-  
+
   );
 }

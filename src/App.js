@@ -15,13 +15,11 @@ import Recepie from './components/screens/recepies/Recepie';
 import Payment from './components/screens/payment/Payment';
 import ShopingCartGallery from './components/screens/shopingCart/ShopingCartGallery';
 import { ThemeProvider } from '@mui/material/styles';
-// import StockProvider from './/StockContext'; // ודא שזה הנתיב לקובץ StockContext.js שלך
 import theme from './theme'; // ודא שזה הנתיב לקובץ theme.js שלך
 import AbautUs from './components/screens/abaut/AbautUs';
 
 function App() {
   return (
-  // <StockProvider>
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <BrowserRouter>

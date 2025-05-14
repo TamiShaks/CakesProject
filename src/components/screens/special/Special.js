@@ -1,4 +1,3 @@
-
 import loading from '../../../assets/images/loading.gif';
 import { addToCart } from '../../../redux/actions';
 import imageMap from './CakeImage';
@@ -29,6 +28,7 @@ export default function Special() {
   // פונקציה להזמנת העוגה
   const handleInviteCake = (myCake) => {
     dispatch(addToCart({ myCake }));
+    alert("העוגה הוספה בהצלחה")
   };
   // פונקציה להציג את התמונה
   const handleShowImage = () => {
@@ -82,13 +82,12 @@ export default function Special() {
     padding: '16px',
     marginBottom: '20px',
   };
-  // סגנונות עבור תיבות הבחירה
-const boxStyles = [
-  { backgroundColor: '#fce4ec' }, // Pink 50
-  { backgroundColor: '#f8bbd0' }, // Pink 100
-  { backgroundColor: '#f48fb1' }, // Pink 200
-  { backgroundColor: '#f06292' }, // Pink 300 (קצת יותר דומיננטי)
-];
+  const boxStyles = [
+    { backgroundColor: '#ede0d4' }, // Light mocha cream
+    { backgroundColor: '#e6ccb2' }, // Mocha בהיר
+    { backgroundColor: '#d5b39f' }, // חום ורדרד עדין
+    { backgroundColor: '#c19a6b' }, // Cafe au lait
+  ];
 
   return (
     <div
@@ -142,7 +141,7 @@ const boxStyles = [
                 value={flavor}
                 onChange={(e) => setFlavor(e.target.value)}
                 style={{ flexDirection: 'column' }}
-              > 
+              >
                 <FormControlLabel value="1" control={<Radio />} label="וניל" />
                 <FormControlLabel value="2" control={<Radio />} label="שוקולד" />
               </RadioGroup>

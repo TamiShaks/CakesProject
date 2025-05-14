@@ -44,7 +44,6 @@ export default function RadioGroupRating({ id }) {
   }, [value, storageKey]);
 
   return (
-
     <StyledRating
       name={`highlight-selected-only-${id}`} // Ensures each rating component has a unique name
       value={value}

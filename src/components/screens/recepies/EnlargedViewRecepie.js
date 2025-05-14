@@ -52,10 +52,10 @@ export const EnlargedViewRecepie = () => {
             <div className="row">
                 {cakeList
                     .filter(cake =>
-                        (
-                            (cake.shape === myCake.shape && cake.color === myCake.color) ||
-                            (cake.Characteristic === myCake.Characteristic)
-                        )
+                    (
+                        (cake.shape === myCake.shape && cake.color === myCake.color) ||
+                        (cake.Characteristic === myCake.Characteristic)
+                    )
                     )
                     .map(cake => (
                         <div key={cake.id} className="col-2 col-sm-4 col-md-3 mb-4">

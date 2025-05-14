@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from "react-router-dom";
 import RadioGroupRating from './RadioGroupRating';
@@ -18,14 +17,14 @@ export default function RecepiesProduct(props) {
                     </Link>
                 </div>
 
-            <div className="card-body">
-                <h5 className="card-title">{props.name}</h5>
-                <p className="card-text">{props.description}</p>
+                <div className="card-body">
+                    <h5 className="card-title">{props.name}</h5>
+                    <p className="card-text">{props.description}</p>
 
-                <RadioGroupRating id={props.id} />
+                    <RadioGroupRating id={props.id} />
 
+                </div>
             </div>
-        </div>
         </div>
     );
 }

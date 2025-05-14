@@ -15,9 +15,9 @@ export default function Home() {
     // State for sorted cake list
     const [sortedCakeList, setSortedCakeList] = useState(cakeList);
     // Scroll to top when component mounts
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, []);
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
     // Sort by Price
     const sortingByPrice = () => {
         const newCakeList = [...cakeList].sort((a, b) => a.price - b.price);
@@ -48,10 +48,10 @@ export default function Home() {
                         ))}
                         <div>
 
-                <Link to={`/BakingOven`} className="btn btn-primary mt-3">
-                <p>למעבר לעגלת הקניות </p>
-                </Link>
-            </div>
+                            <Link to={`/BakingOven`} className="btn btn-primary mt-3">
+                                <p>למעבר לעגלת הקניות </p>
+                            </Link>
+                        </div>
                     </div>
                 )}
                 {/* Main Content */}

@@ -82,16 +82,16 @@ export const EnlargedView = () => {
       <Grid container spacing={2} justifyContent="center">
         {cakeList
           .filter(cake =>
+          (
+            (cake.Characteristic1 === myCake.Characteristic2 && cake.Characteristic2 === myCake.Characteristic1) ||
+            (cake.Characteristic1 === myCake.Characteristic1 && cake.Characteristic2 === myCake.Characteristic2) ||
             (
-              (cake.Characteristic1 === myCake.Characteristic2 && cake.Characteristic2 === myCake.Characteristic1) ||
-              (cake.Characteristic1 === myCake.Characteristic1 && cake.Characteristic2 === myCake.Characteristic2) ||
-              (
-                (cake.Characteristic1 === myCake.Characteristic2 ||
-                 cake.Characteristic1 === myCake.Characteristic1 ||
-                 cake.Characteristic2 === myCake.Characteristic1)
-                && cake.color === myCake.color
-              )
+              (cake.Characteristic1 === myCake.Characteristic2 ||
+                cake.Characteristic1 === myCake.Characteristic1 ||
+                cake.Characteristic2 === myCake.Characteristic1)
+              && cake.color === myCake.color
             )
+          )
           )
           .map(cake => (
             <Grid item xs={4} sm={3} md={2} key={cake.id} textAlign="center">

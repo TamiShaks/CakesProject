@@ -16,7 +16,7 @@
 }
 
 .navbar .nav-link:hover {
-  color: #ff9cd6; /* צבע טקסט בעת ריחוף */
+  color: #d5b39f; /* צבע טקסט בעת ריחוף */
 }
 body {
     padding-top: 90px; /* גובה הניווט */
