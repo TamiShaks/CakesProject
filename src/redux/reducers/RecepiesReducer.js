@@ -8,9 +8,6 @@ import cakeImage5 from './../../assets/images/11.jpg';//בר נטיפים צבע
 import cakeImage8 from './../../assets/images/44.jpg';//יומולדת תמי 44
 import cakeImage6 from './../../assets/images/10.jpg';//בר עם שמנת תותים ונענע 10
 import cakeImage9 from './../../assets/images/16.jpg';//יומולדת צבעונית 16
-
-
-
 const InitialRecepiesCakesList = {
     myRecepiesCakesList: [
         {
@@ -92,6 +89,7 @@ const InitialRecepiesCakesList = {
             
         ]}
 
+// פונקציה המייצגת את ה-reducer של המתכונים
         export default function RecepiesReducer(state = InitialRecepiesCakesList, action) {
             switch (action.type) {
               default:

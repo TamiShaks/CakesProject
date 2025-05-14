@@ -21,29 +21,30 @@ const customIcons = {
   4: { icon: <SentimentSatisfiedAltIcon sx={{ color: '#c1f7c0' }} />, label: 'Satisfied' },
   5: { icon: <SentimentVerySatisfiedIcon sx={{ color: '#b3e5fc' }} />, label: 'Very Satisfied' },
 };
-
+// Custom icon container to display the icons
 function IconContainer(props) {
   const { value, ...other } = props;
   return <span {...other}>{customIcons[value].icon}</span>;
 }
-
 IconContainer.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
 export default function RadioGroupRating({ id }) {
   const storageKey = id ? `userRating-${id}` : 'userRating-default';
-
+  // State to manage the rating value
   const [value, setValue] = React.useState(() => {
     const savedValue = localStorage.getItem(storageKey);
     return savedValue !== null ? Number(savedValue) : 3; // Default to 3 if no value is saved
   });
 
+  // Effect to save the rating value to localStorage whenever it changes
   React.useEffect(() => {
     localStorage.setItem(storageKey, value);
   }, [value, storageKey]);
 
   return (
+
     <StyledRating
       name={`highlight-selected-only-${id}`} // Ensures each rating component has a unique name
       value={value}

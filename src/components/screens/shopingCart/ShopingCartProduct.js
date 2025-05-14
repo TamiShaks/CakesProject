@@ -60,16 +60,18 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addAllReturn, addReturn, reduceFromCart, removeFromCart } from '../../../redux/actions';
 
+
 export default function ShopingCartProduct(props) {
   const dispatch = useDispatch();
 
+    // Log the props to trace issues
     const handleReduceFromCart = (id) => {
-          console.log("id:  ======",id);
             dispatch(reduceFromCart(id)); // Dispatch the action to decrement the amount
             dispatch(addReturn(id))
 
     };
     
+    // Log the props to trace issues
     const handleRemoveFromCart = (props) => {
         dispatch(removeFromCart(props.id)); // Dispatch the action to remove the product
         dispatch(addAllReturn({...props}))

@@ -21,16 +21,16 @@ export default function Special() {
   const [showImageOnly, setShowImageOnly] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
-
+  // חישוב מזהה התמונה על סמך הבחירות של המשתמש
   const imageId = useMemo(() => {
     const computedLayers = shape === '1' ? layers : '1';
     return shape + computedLayers + flavor + decoration;
   }, [shape, layers, flavor, decoration]);
-
+  // פונקציה להזמנת העוגה
   const handleInviteCake = (myCake) => {
     dispatch(addToCart({ myCake }));
   };
-
+  // פונקציה להציג את התמונה
   const handleShowImage = () => {
     setIsLoading(true);
     setTimeout(() => {
@@ -38,7 +38,7 @@ export default function Special() {
       setShowImageOnly(true);
     }, 3000);
   };
-
+  // פונקציה לאיפוס כל הבחירות
   const handleReset = () => {
     setShape('');
     setLayers('1');
@@ -48,6 +48,7 @@ export default function Special() {
     setIsLoading(false);
   };
 
+  // תיאורים עבור כל אפשרות
   const shapeDescriptions = {
     '1': 'עוגה עגולה',
     '2': 'עוגה מרובעת',
@@ -67,32 +68,34 @@ export default function Special() {
     '5': 'קישוטי פרחים יפיפיים',
   };
 
+  // פונקציה שמחזירה תיאור של העוגה
   const getDescription = () => {
     const shapeText = shapeDescriptions[shape] || 'צורה לא נבחרה';
     const flavorText = flavorDescriptions[flavor] || 'טעם לא נבחר';
     const decorationText = decorationDescriptions[decoration] || 'קישוט לא נבחר';
     return ` ${shapeText} עם ${flavorText} ו-${decorationText}`;
   };
-
+  // סגנון בסיסי עבור תיבות הבחירה
   const baseBoxStyle = {
     border: '1px solid #ccc',
     borderRadius: '8px',
     padding: '16px',
     marginBottom: '20px',
   };
-
-  const boxStyles = [
-    { backgroundColor: '#fce4ec' }, // ורוד בהיר
-    { backgroundColor: '#e3f2fd' }, // תכלת
-    { backgroundColor: '#f9fbe7' }, // צהוב פסטלי
-    { backgroundColor: '#e8f5e9' }, // ירוק מנטה
-  ];
+  // סגנונות עבור תיבות הבחירה
+const boxStyles = [
+  { backgroundColor: '#fce4ec' }, // Pink 50
+  { backgroundColor: '#f8bbd0' }, // Pink 100
+  { backgroundColor: '#f48fb1' }, // Pink 200
+  { backgroundColor: '#f06292' }, // Pink 300 (קצת יותר דומיננטי)
+];
 
   return (
     <div
       className={`container d-flex flex-column py-5 ${showImageOnly || isLoading ? 'no-background' : ''}`}
       style={{ direction: 'rtl' }}
     >
+
       {!showImageOnly && !isLoading ? (
         <>
           <h2>בחר בעיצוב כמו שאתה אוהב...</h2>
@@ -139,7 +142,7 @@ export default function Special() {
                 value={flavor}
                 onChange={(e) => setFlavor(e.target.value)}
                 style={{ flexDirection: 'column' }}
-              >
+              > 
                 <FormControlLabel value="1" control={<Radio />} label="וניל" />
                 <FormControlLabel value="2" control={<Radio />} label="שוקולד" />
               </RadioGroup>
@@ -179,6 +182,8 @@ export default function Special() {
         </div>
       ) : (
         <div className="text-center">
+
+
           <h5>כך העוגה שלך תראה לאחר היציאה מהתנור</h5>
           <img src={imageMap[imageId]} alt="Cake" style={{ width: '100%', maxWidth: '600px' }} />
           <div style={{ marginTop: '20px' }}>
@@ -186,8 +191,10 @@ export default function Special() {
               חזרה לבחירה
             </Button>
             <Button
+
               variant="contained"
               onClick={() =>
+
                 handleInviteCake({
                   id: parseInt(imageId, 10),
                   name: 'special cake',

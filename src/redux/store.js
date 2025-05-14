@@ -3,6 +3,7 @@ import { cakesReducer } from './reducers/GalleryHomeReducers'; // Ensure this pa
 import { ShopingCartReducer } from './reducers/ShopingCartReducer'; // Ensure this path is correct
 import RecepiesReducer from './reducers/RecepiesReducer';
 
+// Importing the reducers from their respective files
 const rootReducer = combineReducers({
     cakesList: cakesReducer,
     invitedCakeList: ShopingCartReducer,

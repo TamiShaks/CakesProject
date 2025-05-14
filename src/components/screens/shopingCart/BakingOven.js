@@ -3,12 +3,14 @@ import { useSelector } from 'react-redux';
 import ShopingCartProduct  from './ShopingCartProduct';
 
 export default function BakingOven() {
+    // Redux state for invited cakes
     const invitedCakeList = useSelector((state) => state.invitedCakeList.invitedCakeList);
     console.log("Invited Cake List:", invitedCakeList); // Log the invitedCakeList
 
     return (
         <div className="container">
             <div className="row">
+                
                 {invitedCakeList.length === 0 ? (
                     <p>No items in the shopping cart.</p>
                 ) : (

@@ -35,7 +35,7 @@ import cakeImage33 from './../../assets/images/33.jpg';
 import { SHOWGALLERY ,INVITECAKE, ADDRETURN, ADDALLRETURN} from '../actionTypes';
 import { addToCart } from '../actions';
 import { useDispatch } from 'react-redux';
-
+//מידע על כל התמונות של העוגות
 const InitialCakesList = {
     cakesList: [
      
@@ -475,6 +475,7 @@ const InitialCakesList = {
 };
 
 
+// Importing action types
 export const cakesReducer = (state = InitialCakesList, action) => {
 console.log("tttttthe action is:",action.type)
     switch(action.type) {
@@ -503,6 +504,7 @@ console.log("tttttthe action is:",action.type)
                     ...state,
                     cakesList: updateCakesList, // Return the new cakesList
                 };
+                
          case ADDALLRETURN:
             const props=action.payload
                 const updateAllCakesList = state.cakesList.map((cake, index) => {

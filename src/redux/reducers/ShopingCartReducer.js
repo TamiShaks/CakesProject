@@ -4,6 +4,7 @@ const InitialInvitedCakesList = {
     invitedCakeList: []
 };
 
+// Reducer function to manage the shopping cart state
 export const ShopingCartReducer = (state = InitialInvitedCakesList, action) => {
     console.log("Dispatching Action:", action); // Log the action being dispatched
 

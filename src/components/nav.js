@@ -5,6 +5,7 @@ export default function Nav ()
 {
     return(
         <>
+        {/* ייבוא קבצי CSS של Bootstrap */}
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div className="container-fluid">
     <div className="mx-auto">
